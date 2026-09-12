@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <script>
+      function openMenu() {
+        document.getElementById("sideMenu").classList.add("active"); //it add a class active to existing class sideMenu
+      }
+
+      function closeMenu() {
+        document.getElementById("sideMenu").classList.remove("active");
+      }
+      function switchmode() {
+        document.body.classList.toggle("light-mode");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="menu" onclick="openMenu()">☰</div>
+      <div class="logo">Home Page</div>
+    </div>
+
+    <div class="side-menu" id="sideMenu">
+      <div onclick="closeMenu()">✕</div>
+
+      <div class="navelement" onclick="window.location.href = 'index.html'">
+        🏠 Home
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'learning.html'">
+        🧠 Learning Zone
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'notes.html'">
+        📝 Notes
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'pyqs.html'">
+        📚 PYQs
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'ai.html'">
+        🤖 AI Exam Assistant
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'quiz.html'">
+        ✏️ Quiz
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'mentor.html'">
+        🎓 Mentor
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'nextgen.html'">
+        🚀 NextGen Learning
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'about.html'">
+        ℹ️ About
+      </div>
+
+      <div onclick="switchmode()" class="navelement">🌗 Switch mode</div>
+    </div>
+    <div class="main">
+      <!-- Welcome Section -->
+      <div class="welcome">
+        <h1 class="hhead">Welcome to NextGen Learning</h1>
+
+        <p class="phead">
+          Learn smarter, revise faster, and build the skills you need to succeed
+          in your academic journey.
+        </p>
+
+        <button>Explore Learning</button>
+      </div>
+
+      <!-- Learning Zone -->
+      <div class="card">
+        <h2>🎓 Learning Zone</h2>
+
+        <p>
+          Explore structured tutorials and simplified explanations designed to
+          make difficult concepts easier to understand.
+        </p>
+
+        <button>Start Learning</button>
+      </div>
+
+      <!-- Notes -->
+      <div class="card">
+        <h2>📚 Notes & Study Material</h2>
+
+        <p>
+          Find well-organized notes, important concepts, summaries, and study
+          resources to make your preparation easier.
+        </p>
+
+        <button>View Notes</button>
+      </div>
+
+      <!-- PYQs -->
+      <div class="card">
+        <h2>📝 Previous Year Questions</h2>
+
+        <p>
+          Practice previous year questions and understand important exam
+          patterns while improving your preparation.
+        </p>
+
+        <button>Practice PYQs</button>
+      </div>
+
+      <!-- AI Exam Panic Remover -->
+      <div class="card highlight">
+        <h2>🤖 AI Exam Panic Remover</h2>
+
+        <p>
+          Feeling stuck before an exam? Get quick revision points, important
+          concepts, and focused study guidance.
+        </p>
+
+        <button>Try AI Assistant</button>
+      </div>
+
+      <!-- Quiz -->
+      <div class="card">
+        <h2>🧠 Test Your Knowledge</h2>
+
+        <p>
+          Challenge yourself with quizzes, identify your weak areas, and improve
+          your understanding through practice.
+        </p>
+
+        <button>Take a Quiz</button>
+      </div>
+
+      <!-- Mentor -->
+      <div class="card">
+        <h2>👨‍🏫 Connect with a Mentor</h2>
+
+        <p>
+          Get guidance, clear your doubts, and receive useful study advice to
+          stay on track.
+        </p>
+
+        <button>Connect with Mentor</button>
+      </div>
+
+      <!-- About -->
+      <div class="about">
+        <h2>🚀 Learn. Practice. Improve.</h2>
+
+        <p>
+          NextGen Learning brings learning resources, practice, revision tools,
+          and guidance together in one platform.
+        </p>
+      </div>
+
+      <!-- ================================
+     NEXTGEN LEARNING SECTION
+================================ -->
+
+      <section class="nextgen-section" id="nextgen">
+        <div class="nextgen-header">
+          <span class="section-tag">NEXTGEN LEARNING</span>
+
+          <h2>Learning Designed for the Next Generation</h2>
+
+          <p>
+            NextGen Learning is built as a next-generation learning platform
+            that brings knowledge, practice, guidance, and technology together
+            in one place.
+          </p>
+        </div>
+
+        <!-- INTERNAL NAVIGATION -->
+
+        <nav class="nextgen-nav">
+          <a href="#nextgen-about"> About </a>
+
+          <a href="#nextgen-problem"> Why We Built It </a>
+
+          <a href="#nextgen-features"> What We Provide </a>
+
+          <a href="#nextgen-experience"> Learning Experience </a>
+
+          <a href="#nextgen-users"> Who It Helps </a>
+
+          <a href="#nextgen-vision"> Our Vision </a>
+        </nav>
+
+        <!-- ABOUT -->
+
+        <div class="nextgen-block" id="nextgen-about">
+          <h3>📚 About NextGen Learning</h3>
+
+          <p>
+            NextGen Learning is a student-focused learning platform designed to
+            make academic learning more organized, accessible, and effective. It
+            brings together study notes, tutorials, previous year questions,
+            quizzes, revision resources, AI-powered assistance, and mentor
+            support within a single platform.
+          </p>
+
+          <p>
+            Instead of depending on multiple sources for learning, students can
+            use NextGen Learning as a central learning space where they can
+            discover concepts, practice questions, revise important topics, and
+            seek guidance whenever required.
+          </p>
+        </div>
+
+        <!-- WHY WE BUILT IT -->
+
+        <div class="nextgen-block" id="nextgen-problem">
+          <h3>🎯 Why We Built NextGen Learning</h3>
+
+          <p>
+            Students often have access to a large amount of educational content,
+            but finding the right material at the right time can become
+            difficult. Notes may be scattered across different platforms, useful
+            tutorials can be difficult to find, and students may spend more time
+            searching for resources than actually learning.
+          </p>
+
+          <p>
+            NextGen Learning is being developed to reduce this difficulty by
+            bringing important learning resources together in a structured
+            environment. The idea is to make the learning process simpler so
+            students can spend more time understanding concepts and improving
+            their skills.
+          </p>
+        </div>
+
+        <!-- WHAT WE PROVIDE -->
+
+        <div class="nextgen-block" id="nextgen-features">
+          <h3>🧩 What We Provide</h3>
+
+          <p>
+            The platform is designed around the different stages of a student's
+            learning journey. Students can access organized learning material,
+            practice what they have learned, revise important concepts, and
+            receive additional guidance when needed.
+          </p>
+
+          <ul class="nextgen-list">
+            <li>
+              <strong>Learning Resources:</strong>
+              Structured notes, tutorials, explanations, and study materials for
+              different subjects and branches.
+            </li>
+
+            <li>
+              <strong>Previous Year Questions:</strong>
+              Practice important questions and understand common examination
+              patterns.
+            </li>
+
+            <li>
+              <strong>Quizzes:</strong>
+              Test your understanding and identify topics that need additional
+              practice.
+            </li>
+
+            <li>
+              <strong>AI Exam Assistance:</strong>
+              Get quick revision points, concept explanations, important topics,
+              and focused exam guidance.
+            </li>
+
+            <li>
+              <strong>Mentor Support:</strong>
+              Receive guidance, clarify doubts, and get support during your
+              learning journey.
+            </li>
+          </ul>
+        </div>
+
+        <!-- LEARNING EXPERIENCE -->
+
+        <div class="nextgen-block" id="nextgen-experience">
+          <h3>⚡ A Better Learning Experience</h3>
+
+          <p>
+            NextGen Learning focuses not only on providing content but also on
+            creating a smoother learning experience. The platform is designed to
+            help students move naturally from learning a concept to practicing
+            it and finally revising it before an examination.
+          </p>
+
+          <p class="workflow">Learn → Practice → Test → Revise → Improve</p>
+
+          <p>
+            This approach helps students organize their preparation instead of
+            depending entirely on last-minute study. With resources, quizzes, AI
+            assistance, and guidance available through the same platform,
+            students can build a more consistent learning routine.
+          </p>
+        </div>
+
+        <!-- WHO IT HELPS -->
+
+        <div class="nextgen-block" id="nextgen-users">
+          <h3>👥 Who Can Benefit?</h3>
+
+          <p>
+            NextGen Learning is designed primarily for students, but its
+            resources can also be useful for educators and learners who want a
+            centralized place for academic resources.
+          </p>
+
+          <div class="user-grid">
+            <div class="user-item">
+              <h4>🎓 Students</h4>
+              <p>
+                Learn concepts, prepare for examinations, practice questions,
+                and revise important topics.
+              </p>
+            </div>
+
+            <div class="user-item">
+              <h4>👨‍💻 Engineering Learners</h4>
+              <p>
+                Access resources across branches such as Computer Science,
+                Civil, Mechanical, and Electrical Engineering.
+              </p>
+            </div>
+
+            <div class="user-item">
+              <h4>📖 Exam Aspirants</h4>
+              <p>
+                Use revision resources, practice questions, and focused
+                preparation tools.
+              </p>
+            </div>
+
+            <div class="user-item">
+              <h4>👨‍🏫 Educators</h4>
+              <p>
+                Use organized resources to support teaching, revision, and
+                student guidance.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- VISION -->
+
+        <div class="nextgen-block" id="nextgen-vision">
+          <h3>🌱 Our Vision</h3>
+
+          <p>
+            Our vision is to continuously develop NextGen Learning into a modern
+            learning ecosystem where students can access quality educational
+            resources, practice their knowledge, receive intelligent assistance,
+            and connect with guidance whenever they need it.
+          </p>
+
+          <p>
+            As technology continues to transform education, NextGen Learning
+            aims to combine traditional learning resources with modern
+            technologies such as AI and interactive learning tools to create a
+            more accessible and student-friendly experience.
+          </p>
+
+          <p class="vision-line">
+            Learn Smarter. Practice Better. Grow Continuously.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

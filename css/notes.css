@@ -1,0 +1,647 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+/* ================================
+BODY
+================================ */
+
+body {
+min-height: 100vh;
+font-family: "Poppins", sans-serif;
+background: linear-gradient(
+135deg,
+#06191b,
+#0b3034,
+#123f43
+);
+color: white;
+overflow-x: hidden;
+}
+
+/* ================================
+NAVBAR
+================================ */
+
+.navbar {
+height: 60px;
+width: 100%;
+display: flex;
+align-items: center;
+gap: 20px;
+padding: 0 30px;
+background: rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+color: white;
+font-size: 22px;
+font-weight: 600;
+}
+
+.menu {
+color: white;
+font-size: 28px;
+cursor: pointer;
+user-select: none;
+}
+
+/* ================================
+SIDE MENU
+================================ */
+
+.side-menu {
+position: fixed;
+top: 0;
+left: -280px;
+
+width: 280px;
+height: 100vh;
+
+padding: 20px;
+
+background: #082326;
+color: white;
+
+z-index: 1000;
+
+transition: left 0.3s ease;
+
+overflow-y: auto;
+}
+
+.side-menu.active {
+left: 0;
+}
+
+.side-menu div {
+padding: 15px;
+border-radius: 10px;
+cursor: pointer;
+}
+
+.side-menu div:hover {
+background: #128990;
+}
+
+/* ================================
+MAIN CONTAINER
+================================ */
+
+.main {
+width: 90%;
+max-width: 1100px;
+
+margin: 40px auto;
+}
+
+/* ================================
+NOTES SECTION
+================================ */
+
+.notes-section {
+padding: 40px 20px;
+text-align: center;
+}
+
+.notes-section-title {
+font-size: 2.2rem;
+line-height: 1.3;
+color: #8b7bff;
+margin-bottom: 10px;
+}
+
+.notes-section-subtitle {
+color: #9aa5b1;
+margin-bottom: 40px;
+}
+
+/* ================================
+NOTES CARD GRID
+================================ */
+/* ================================
+NOTES CARD GRID
+================================ */
+
+.notes-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(5, 118, 130,30%);
+  border-radius: 20px;
+
+
+  gap: 40px;
+
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ================================
+NOTES CARD
+================================ */
+
+.notes-card {
+  flex: 1 1 260px;   /* grow, shrink, base width — like minmax(260px, 1fr) in grid */
+  max-width: 320px;  /* stops cards from stretching too wide on large screens */
+
+  background: #0d1420;
+
+  border: 1px solid rgba(139, 123, 255, 0.25);
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+.notes-card:hover {
+transform: translateY(-6px);
+
+border-color: #00e5ff;
+
+box-shadow:
+0 8px 24px rgba(0, 229, 255, 0.15);
+}
+
+/* ================================
+CARD IMAGE
+================================ */
+
+.notes-card img {
+width: 100%;
+height: 180px;
+
+object-fit:contain;
+
+display: block;
+}
+
+/* ================================
+CARD INFORMATION
+================================ */
+
+.notes-card-info {
+padding: 16px;
+text-align: left;
+}
+
+.notes-card-info h3 {
+color: #00e5ff;
+
+font-size: 1.05rem;
+
+line-height: 1.4;
+
+margin: 0 0 4px 0;
+}
+
+.notes-card-info p {
+color: #c7d0d9;
+
+font-size: 0.9rem;
+
+margin: 0;
+}
+
+/* ==================================================
+TABLETS
+================================================== */
+
+@media (max-width: 768px) {
+
+.navbar {
+height: 58px;
+padding: 0 20px;
+}
+
+.menu {
+font-size: 26px;
+}
+
+.logo {
+font-size: 19px;
+}
+
+.main {
+width: 94%;
+margin: 25px auto;
+}
+
+.notes-section {
+padding: 30px 10px;
+}
+
+.notes-section-title {
+font-size: 1.8rem;
+}
+
+.notes-section-subtitle {
+font-size: 0.95rem;
+margin-bottom: 30px;
+}
+
+.notes-card-grid {
+grid-template-columns: repeat(
+2,
+minmax(0, 1fr)
+);
+
+
+gap: 18px;
+
+
+}
+
+.notes-card img {
+height: 150px;
+}
+
+.notes-card-info {
+padding: 13px;
+}
+
+.notes-card-info h3 {
+font-size: 0.95rem;
+}
+
+.notes-card-info p {
+font-size: 0.82rem;
+}
+}
+
+/* ==================================================
+MOBILE PHONES
+================================================== */
+
+@media (max-width: 500px) {
+
+.navbar {
+height: 55px;
+padding: 0 15px;
+gap: 12px;
+}
+
+.menu {
+font-size: 25px;
+}
+
+.logo {
+font-size: 17px;
+}
+
+/* Side menu */
+
+.side-menu {
+width: 250px;
+left: -250px;
+padding: 15px;
+}
+
+.side-menu div {
+padding: 13px;
+font-size: 0.9rem;
+}
+
+/* Main */
+
+.main {
+width: 100%;
+margin: 0 auto;
+}
+
+.notes-section {
+padding: 30px 15px;
+}
+
+/* Heading */
+
+.notes-section-title {
+font-size: 1.5rem;
+line-height: 1.35;
+}
+
+.notes-section-subtitle {
+font-size: 0.85rem;
+line-height: 1.5;
+margin-bottom: 25px;
+}
+
+/* Cards */
+
+.notes-card-grid {
+grid-template-columns: 1fr;
+gap: 18px;
+}
+
+.notes-card {
+border-radius: 12px;
+}
+
+.notes-card img {
+height: 190px;
+}
+
+.notes-card-info {
+padding: 14px;
+}
+
+.notes-card-info h3 {
+font-size: 1rem;
+}
+
+.notes-card-info p {
+font-size: 0.85rem;
+}
+
+/* Disable large hover movement on touch devices */
+
+.notes-card:hover {
+transform: none;
+}
+}
+
+/* ==================================================
+VERY SMALL PHONES
+================================================== */
+
+@media (max-width: 360px) {
+
+.logo {
+font-size: 15px;
+}
+
+.notes-section-title {
+font-size: 1.35rem;
+}
+
+.notes-section-subtitle {
+font-size: 0.8rem;
+}
+
+.notes-card img {
+height: 170px;
+}
+
+.notes-card-info h3 {
+font-size: 0.95rem;
+}
+}
+
+
+
+
+/* ================================
+USTAD CHAT — TOGGLE BUTTON
+================================ */
+
+#ustadToggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  z-index: 1100;
+  transition: transform 0.2s ease;
+}
+
+#ustadToggle:hover {
+  transform: scale(1.08);
+}
+
+/* ================================
+CHAT WINDOW
+================================ */
+
+#ustadWindow {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  width: 340px;
+  height: 460px;
+  background: #e5ddd5; /* classic WhatsApp chat wallpaper tone */
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transform: translateY(20px);
+  color: #06191b;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 1100;
+}
+
+#ustadWindow.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ================================
+HEADER
+================================ */
+
+.ustad-header {
+  background: #128c7e;
+  color: white;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ustad-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.ustad-header-info {
+  flex: 1;
+  line-height: 1.3;
+}
+
+.ustad-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.ustad-status {
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+.ustad-close {
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.9;
+  padding: 4px;
+}
+
+.ustad-close:hover {
+  opacity: 1;
+}
+
+/* ================================
+MESSAGES AREA
+================================ */
+
+.ustad-messages {
+  flex: 1;
+  padding: 14px 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ustad-msg {
+  display: flex;
+  flex-direction: column;
+  max-width: 82%;
+}
+
+.ustad-msg.user {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.ustad-msg.bot {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.bubble {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  white-space: pre-wrap;   /* preserves newlines from AI responses */
+  word-wrap: break-word;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.ustad-msg.user .bubble {
+  background: #dcf8c6; /* WhatsApp outgoing green */
+  color: #111;
+  border-top-right-radius: 2px;
+}
+
+.ustad-msg.bot .bubble {
+  background: #ffffff;
+  color: #111;
+  border-top-left-radius: 2px;
+}
+
+.ustad-time {
+  font-size: 0.68rem;
+  color: #667781;
+  margin-top: 2px;
+  padding: 0 4px;
+}
+
+.ustad-msg.typing .bubble {
+  font-style: italic;
+  color: #667781;
+}
+
+/* --- Code blocks inside AI responses --- */
+
+.bubble pre {
+  background: #0d1420;
+  color: #e5e5e5;
+  padding: 10px 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 8px 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.bubble code {
+  font-family: "Courier New", monospace;
+}
+
+.bubble p code, .bubble li code {
+  background: rgba(0, 0, 0, 0.08);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+/* ================================
+INPUT ROW
+================================ */
+
+.ustad-input-row {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background: #f0f0f0;
+  gap: 8px;
+}
+
+.ustad-input-row input {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  font-size: 0.88rem;
+  background: white;
+}
+
+.ustad-input-row button {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.ustad-input-row button:hover {
+  background: #1ea952;
+}
+
+/* ================================
+RESPONSIVE — MOBILE
+================================ */
+
+@media (max-width: 500px) {
+  #ustadWindow {
+    width: 92vw;
+    height: 70vh;
+    bottom: 84px;
+    right: 4vw;
+  }
+}

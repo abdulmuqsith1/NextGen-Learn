@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <script>
+      function openMenu() {
+        document.getElementById("sideMenu").classList.add("active"); //it add a class active to existing class sideMenu
+      }
+
+      function closeMenu() {
+        document.getElementById("sideMenu").classList.remove("active");
+      }
+      function switchmode() {
+        document.body.classList.toggle("light-mode");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="menu" onclick="openMenu()">☰</div>
+      <div class="logo">NextGen Quiz</div>
+    </div>
+
+    <div class="side-menu" id="sideMenu">
+      <div onclick="closeMenu()">✕</div>
+
+      <div class="navelement" onclick="window.location.href = 'index.html'">
+        🏠 Home
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'learning.html'">
+        🧠 Learning Zone
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'notes.html'">
+        📝 Notes
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'pyqs.html'">
+        📚 PYQs
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'ai.html'">
+        🤖 AI Exam Assistant
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'quiz.html'">
+        ✏️ Quiz
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'mentor.html'">
+        🎓 Mentor
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'nextgen.html'">
+        🚀 NextGen Learning
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'about.html'">
+        ℹ️ About
+      </div>
+
+      <div onclick="switchmode()" class="navelement">🌗 Switch mode</div>
+    </div>
+    <div class="main"></div>
+  </body>
+</html>

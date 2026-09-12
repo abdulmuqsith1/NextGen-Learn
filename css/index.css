@@ -1,0 +1,733 @@
+/* ================================
+   GLOBAL RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   BODY
+================================ */
+
+body {
+    min-height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #06191b,
+        #0b3034,
+        #123f43
+    );
+
+    color: white;
+}
+
+.navbar {
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    gap:20px;
+
+    padding: 0 30px;
+
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.menu {
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* SIDE MENU */
+
+.side-menu {
+    position: fixed;
+    
+
+    top: 0;
+    left: -280px;
+
+    width: 280px;
+    height: 100vh;
+
+    padding: 20px;
+
+    background: #082326;
+
+    color: white;
+    z-index: 1000;/*brimgs infront of all divs*/
+    transition: 0.3s;
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+.side-menu div {
+    padding: 15px;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.side-menu div:hover {
+    background: #128990;
+    border-radius: 10px;
+}
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.main {
+    width: 90%;
+    max-width: 1000px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    margin: 40px auto;
+}
+
+
+/* ================================
+   WELCOME SECTION
+================================ */
+
+.welcome {
+    flex: 0 0 100%;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        rgba(18, 137, 144, 0.55),
+        rgba(10, 65, 72, 0.55)
+    );
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.30);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* ================================
+   MAIN HEADING
+================================ */
+
+.hhead {
+    color: #e8ffff;
+
+    font-size: 2.2rem;
+
+    font-weight: 700;
+
+    text-align: center;
+
+    margin-bottom: 15px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ================================
+   MAIN PARAGRAPH
+================================ */
+
+.phead {
+    color: rgb(246, 211, 136);
+
+    font-size: 1rem;
+
+    font-weight: 400;
+
+    text-align: center;
+
+    line-height: 1.7;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+/* ================================
+   CARDS
+================================ */
+
+.card {
+    flex: 1 1 calc(50% - 20px);
+
+    padding: 25px;
+
+    background: rgba(18, 137, 144, 0.30);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(8px);
+
+    transition: 0.3s ease;
+}
+
+
+/* ================================
+   CARD HOVER
+================================ */
+
+.card:hover {
+    transform: translateY(-8px);
+
+    background: rgba(18, 137, 144, 0.40);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ================================
+   CARD HEADINGS
+================================ */
+
+.card h2 {
+    color: #e8ffff;
+
+    font-size: 1.4rem;
+
+    margin-bottom: 10px;
+}
+
+
+/* ================================
+   CARD PARAGRAPHS
+================================ */
+
+.card p {
+    color: #d8eeee;
+
+    font-size: 0.95rem;
+
+    line-height: 1.6;
+}
+
+
+/* ================================
+   HIGHLIGHT CARD
+================================ */
+
+.highlight {
+    background: linear-gradient(
+        135deg,
+        rgba(18, 137, 144, 0.55),
+        rgba(246, 211, 136, 0.12)
+    );
+
+    border: 1px solid rgba(246, 211, 136, 0.25);
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+button {
+    margin-top: 20px;
+
+    padding: 11px 22px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #128990,
+        #0b6269
+    );
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+/* ================================
+   BUTTON HOVER
+================================ */
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ================================
+   ABOUT SECTION
+================================ */
+
+.about {
+    flex: 0 0 100%;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.20);
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+.about h2 {
+    color: rgb(246, 211, 136);
+
+    margin-bottom: 10px;
+}
+
+
+.about p {
+    color: #d8eeee;
+
+    line-height: 1.6;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    .main {
+        width: 92%;
+
+        margin: 25px auto;
+
+        gap: 15px;
+    }
+
+
+    .welcome {
+        padding: 30px 18px;
+    }
+
+
+    .hhead {
+        font-size: 1.7rem;
+    }
+
+
+    .phead {
+        font-size: 0.9rem;
+    }
+
+
+    .card {
+        flex: 1 1 100%;
+
+        padding: 20px;
+    }
+
+
+    .card h2 {
+        font-size: 1.2rem;
+    }
+
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+}
+
+
+/* ================================
+   NEXTGEN LEARNING
+================================ */
+
+.nextgen-section {
+    flex: 0 0 100%;
+
+    margin-top: 20px;
+    padding: 45px 35px;
+
+    background: rgba(0, 0, 0, 0.18);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 22px;
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.nextgen-header {
+    text-align: center;
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+.section-tag {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    background: rgba(246, 211, 136, 0.12);
+
+    color: rgb(246, 211, 136);
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+}
+
+
+.nextgen-header h2 {
+    color: #e8ffff;
+
+    font-size: 2rem;
+
+    margin-bottom: 15px;
+}
+
+
+.nextgen-header p {
+    color: #d8eeee;
+
+    line-height: 1.7;
+}
+
+
+/* ================================
+   INTERNAL NAVIGATION
+================================ */
+
+.nextgen-nav {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: 35px 0;
+
+    padding: 15px;
+
+    background: rgba(0, 0, 0, 0.18);
+
+    border-radius: 15px;
+}
+
+
+.nextgen-nav a {
+    color: #d8eeee;
+
+    text-decoration: none;
+
+    padding: 8px 14px;
+
+    border-radius: 8px;
+
+    font-size: 0.85rem;
+
+    transition: 0.3s ease;
+}
+
+
+.nextgen-nav a:hover {
+    color: white;
+
+    background: rgba(18, 137, 144, 0.45);
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   CONTENT BLOCKS
+================================ */
+
+.nextgen-block {
+    scroll-margin-top: 20px;
+
+    margin-top: 25px;
+
+    padding: 30px;
+
+    background: rgba(18, 137, 144, 0.16);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+}
+
+
+.nextgen-block h3 {
+    color: rgb(246, 211, 136);
+
+    font-size: 1.35rem;
+
+    margin-bottom: 15px;
+}
+
+
+.nextgen-block p {
+    color: #d8eeee;
+
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+/* ================================
+   LIST
+================================ */
+
+.nextgen-list {
+    padding-left: 20px;
+
+    color: #d8eeee;
+}
+
+
+.nextgen-list li {
+    margin-bottom: 13px;
+
+    line-height: 1.7;
+}
+
+
+.nextgen-list strong {
+    color: #e8ffff;
+}
+
+
+/* ================================
+   WORKFLOW
+================================ */
+
+.workflow {
+    text-align: center;
+
+    padding: 15px;
+
+    margin: 20px 0 !important;
+
+    border-radius: 12px;
+
+    background: rgba(246, 211, 136, 0.08);
+
+    color: rgb(246, 211, 136) !important;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+/* ================================
+   USER GRID
+================================ */
+
+.user-grid {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+
+.user-item {
+    flex: 1 1 calc(50% - 10px);
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.16);
+
+    border-radius: 14px;
+}
+
+
+.user-item h4 {
+    color: #e8ffff;
+
+    margin-bottom: 8px;
+}
+
+
+.user-item p {
+    margin-bottom: 0;
+
+    font-size: 0.9rem;
+}
+
+
+/* ================================
+   VISION
+================================ */
+
+.vision-line {
+    text-align: center;
+
+    margin-top: 25px !important;
+
+    color: rgb(246, 211, 136) !important;
+
+    font-size: 1.05rem !important;
+
+    font-weight: 600;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    .nextgen-section {
+        padding: 30px 18px;
+    }
+
+    .nextgen-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .nextgen-nav {
+        flex-direction: column;
+    }
+
+    .nextgen-nav a {
+        text-align: center;
+    }
+
+    .nextgen-block {
+        padding: 22px;
+    }
+
+    .user-item {
+        flex: 1 1 100%;
+    }
+
+}
+
+/* SWITCH MODE*/
+.light-mode {
+    background: #d3f7ff;
+    color: #222;
+}
+
+.light-mode .logo {
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.light-mode .welcome {
+    background-color: pink;
+}
+
+.light-mode .menu {
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.light-mode .navbar {
+    background: rgb(114, 227, 255);
+}
+
+.light-mode .side-menu.active {
+    color: #082326;
+    background: rgb(202, 244, 255);
+}
+
+
+.light-mode .side-menu.active:hover {
+    color: #ffffff;
+    background-color: rgb(47, 92, 97);
+}
+
+.light-mode .card {
+    background: rgb(202, 244, 255);
+    color: #222;
+}
+
+.light-mode .card h2 {
+    color: #222;
+}
+
+.light-mode .card p {
+    color: #444;
+}
+.light-mode .nextgen-block{
+    color: #06191b;
+}
+.light-mode .nextgen-section{
+    color: #06191b;
+}
+.light-mode .nextgen-section p{
+    color:#06191b;
+}
+.light-mode .nextgen-list{
+    color:#082326
+}

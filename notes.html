@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>HomePage</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/notes.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <!-- Safety-net override: guarantees the send button stays a fixed circle
+         even if an older .ustad-input-row button rule still exists in
+         notes.css or index.css. Loaded last, so it wins the cascade. -->
+    <style>
+      .ustad-input-row button {
+        width: 38px !important;
+        height: 38px !important;
+        padding: 0 !important;
+        border-radius: 50% !important;
+        flex-shrink: 0 !important;
+      }
+    </style>
+
+    <script>
+      function openMenu() {
+        document.getElementById("sideMenu").classList.add("active");
+      }
+
+      function closeMenu() {
+        document.getElementById("sideMenu").classList.remove("active");
+      }
+
+      function switchmode() {
+        document.body.classList.toggle("light-mode");
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="menu" onclick="openMenu()">☰</div>
+
+      <div class="logo">NextGen Notes</div>
+    </div>
+
+    <!-- SIDE MENU -->
+    <div class="side-menu" id="sideMenu">
+      <div onclick="closeMenu()">✕</div>
+
+      <div class="navelement" onclick="window.location.href = 'index.html'">
+        🏠 Home
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'learning.html'">
+        🧠 Learning Zone
+      </div>
+
+      <div class="navelement" onclick="window.location.href = '#cse'">
+        💻 CSE
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'pyqs.html'">
+        📚 PYQs
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'ai.html'">
+        🤖 AI Exam Assistant
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'quiz.html'">
+        ✏️ Quiz
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'mentor.html'">
+        🎓 Mentor
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'nextgen.html'">
+        🚀 NextGen Learning
+      </div>
+
+      <div class="navelement" onclick="window.location.href = 'about.html'">
+        ℹ️ About
+      </div>
+
+      <div class="navelement" onclick="switchmode()">🌗 Switch mode</div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+      <section class="notes-section">
+        <h1 class="notes-section-title" id="cse">
+          Core Computer Science Programming Notes
+        </h1>
+
+        <p class="notes-section-subtitle">
+          Download comprehensive study materials and reference guides.
+        </p>
+
+        <!-- NOTES CARDS -->
+        <div class="notes-card-grid">
+          <!-- Maths -->
+          <div
+            class="notes-card"
+            onclick="window.location.href = 'maths-notes.html'"
+          >
+            <img src="images/maths.jpg" alt="Maths Notes" />
+
+            <div class="notes-card-info">
+              <h3>Important Maths Notes</h3>
+              <p>Easy to understand</p>
+            </div>
+          </div>
+
+          <!-- Python -->
+          <div
+            class="notes-card"
+            onclick="window.location.href = 'python-notes.html'"
+          >
+            <img src="images/python.jpg" alt="Python Notes" />
+
+            <div class="notes-card-info">
+              <h3>Python Notes</h3>
+              <p>Easy to understand</p>
+            </div>
+          </div>
+
+          <!-- C -->
+          <div
+            class="notes-card"
+            onclick="window.location.href = 'c-notes.html'"
+          >
+            <img src="images/c.jpg" alt="C Notes" />
+
+            <div class="notes-card-info">
+              <h3>Foundational Language</h3>
+            </div>
+          </div>
+
+          <!-- C++ -->
+          <div
+            class="notes-card"
+            onclick="window.location.href = 'cpp-notes.html'"
+          >
+            <img src="images/cpp.png" alt="C++ Notes" />
+
+            <div class="notes-card-info">
+              <h3>OOPS Fundamentals</h3>
+            </div>
+          </div>
+
+          <!-- Java -->
+          <div
+            class="notes-card"
+            onclick="window.location.href = 'java-notes.html'"
+          >
+            <img src="images/java.jpg" alt="Java Notes" />
+
+            <div class="notes-card-info">
+              <h3>Java: Demanded Language (Difficult)</h3>
+            </div>
+          </div>
+
+          <!-- DBMS -->
+          <div
+            class="notes-card"
+            onclick="window.location.href = 'dbms-notes.html'"
+          >
+            <img src="images/rdbms.jpg" alt="DBMS Notes" />
+
+            <div class="notes-card-info">
+              <h3>DBMS</h3>
+              <p>Theory + SQL</p>
+            </div>
+          </div>
+
+          <!-- Web Development -->
+          <div
+            class="notes-card"
+            onclick="window.location.href = 'webdev-notes.html'"
+          >
+            <img src="images/webdev.jpg" alt="Web Development Notes" />
+
+            <div class="notes-card-info">
+              <h3>WebDev</h3>
+            </div>
+          </div>
+
+          <!-- Discrete Math -->
+          <div
+            class="notes-card"
+            onclick="window.location.href = 'dm-notes.html'"
+          >
+            <img src="images/dm.jpg" alt="Discrete Mathematics Notes" />
+
+            <div class="notes-card-info">
+              <h3>Discrete Mathematics</h3>
+            </div>
+          </div>
+        </div>
+        <!-- closes notes-card-grid -->
+      </section>
+    </div>
+
+    <!-- Ustad Chat Button -->
+    <div id="ustadToggle" onclick="toggleUstad()">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+        <path
+          d="M12 2C6.48 2 2 6.02 2 11c0 2.25 1 4.29 2.64 5.85L4 22l5.34-1.4C10.36 20.85 11.17 21 12 21c5.52 0 10-4.02 10-9s-4.48-10-10-10z"
+        />
+      </svg>
+    </div>
+
+    <!-- Ustad Chat Window -->
+    <div id="ustadWindow">
+      <div class="ustad-header">
+        <div class="ustad-avatar">🤖</div>
+        <div class="ustad-header-info">
+          <div class="ustad-name">Ustad</div>
+          <div class="ustad-status">Online • AI Mentor</div>
+        </div>
+        <div class="ustad-close" onclick="toggleUstad()">✕</div>
+      </div>
+
+      <div id="ustadMessages" class="ustad-messages">
+        <div class="ustad-msg bot">
+          <div class="bubble">
+            Hey! I'm Ustad 👋 Ask me anything about your subjects.
+          </div>
+          <span class="ustad-time">Now</span>
+        </div>
+      </div>
+
+      <div class="ustad-input-row">
+        <input
+          id="ustadInput"
+          type="text"
+          placeholder="Type a message"
+          onkeydown="if (event.key === 'Enter') sendToUstad();"
+        />
+        <button onclick="sendToUstad()">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
+            <path d="M2 21l21-9L2 3v7l15 2-15 2z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Ustad logic lives in javascript/ustad.js — loaded once, here, deferred -->
+    <script src="javascript/ustad.js" defer></script>
+  </body>
+</html>
