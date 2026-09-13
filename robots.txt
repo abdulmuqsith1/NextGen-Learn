@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nextgen-learn.abdulmuqsithofficial.workers.dev/sitemap.xml
