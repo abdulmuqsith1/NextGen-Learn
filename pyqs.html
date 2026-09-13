@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HomePage</title>
+
+    <title>NextGen PYQs - Notes</title>
+
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -11,28 +14,90 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Your NEW UI CSS -->
     <link rel="stylesheet" href="css/index.css" />
+
+    <!-- Notes page CSS -->
+    <link rel="stylesheet" href="css/notes.css" />
+
+    <!-- Ustad CSS -->
+    <link rel="stylesheet" href="css/ai.css" />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
     <script>
+      /* =========================
+         SIDEBAR
+      ========================= */
+
       function openMenu() {
-        document.getElementById("sideMenu").classList.add("active"); //it add a class active to existing class sideMenu
+        document.getElementById("sideMenu").classList.add("active");
       }
 
       function closeMenu() {
         document.getElementById("sideMenu").classList.remove("active");
       }
+
+      /* =========================
+         DARK / LIGHT MODE
+      ========================= */
+
       function switchmode() {
         document.body.classList.toggle("light-mode");
       }
+
+      /* =========================
+         CLOSE SIDEBAR AFTER CLICK
+      ========================= */
+
+      function goToSection(id) {
+        closeMenu();
+
+        setTimeout(() => {
+          document.getElementById(id).scrollIntoView({
+            behavior: "smooth",
+          });
+        }, 100);
+      }
     </script>
   </head>
+
   <body>
+    <!-- =========================================
+         NEW NAVBAR
+    ========================================== -->
+
     <div class="navbar">
       <div class="menu" onclick="openMenu()">☰</div>
-      <div class="logo">NextGen PYQ</div>
+
+      <header>
+        <h3>NextGen PYQs</h3>
+
+        <ul class="top-header-list">
+          <li onclick="window.location.href = 'learning.html'">🔥 Tutorial</li>
+
+          <li onclick="window.location.href = 'notes.html'">Notes</li>
+
+          <li onclick="window.location.href = 'ai.html'">AI-EPR</li>
+
+          <li onclick="window.location.href = 'pyqs.html'">PYQS</li>
+
+          <li onclick="window.location.href = 'about.html'">About</li>
+        </ul>
+      </header>
     </div>
 
+    <!-- =========================================
+         NEW SIDEBAR
+    ========================================== -->
+
     <div class="side-menu" id="sideMenu">
-      <div onclick="closeMenu()">✕</div>
+      <div class="menu-close" onclick="closeMenu()">✕</div>
 
       <div class="navelement" onclick="window.location.href = 'index.html'">
         🏠 Home
@@ -42,7 +107,10 @@
         🧠 Learning Zone
       </div>
 
-      <div class="navelement" onclick="window.location.href = 'notes.html'">
+      <div
+        class="navelement active-nav"
+        onclick="window.location.href = 'notes.html'"
+      >
         📝 Notes
       </div>
 
@@ -71,7 +139,643 @@
       </div>
 
       <div onclick="switchmode()" class="navelement">🌗 Switch mode</div>
+
+      <!-- Jump to sections -->
+
+      <div class="sidebar-divider"></div>
+
+      <div class="sidebar-heading">📚 PYQ Sections</div>
+
+      <div class="navelement section-nav" onclick="goToSection('tg-ecet')">
+        🎯 TG ECET
+      </div>
+
+      <div class="navelement section-nav" onclick="goToSection('computer')">
+        💻 Computer Science
+      </div>
+
+      <div class="navelement section-nav" onclick="goToSection('electrical')">
+        ⚡ Electrical Engineering
+      </div>
+
+      <div class="navelement section-nav" onclick="goToSection('electronics')">
+        🔌 Electronics & Communication
+      </div>
+
+      <div class="navelement section-nav" onclick="goToSection('civil')">
+        🏗️ Civil Engineering
+      </div>
+
+      <div class="navelement section-nav" onclick="goToSection('mechanical')">
+        ⚙️ Mechanical Engineering
+      </div>
+
+      <div class="navelement section-nav" onclick="goToSection('chemical')">
+        🧪 Chemical Engineering
+      </div>
+
+      <div class="navelement section-nav" onclick="goToSection('medical')">
+        🩺 NEET
+      </div>
     </div>
-    <div class="main"></div>
+
+    <!-- =========================================
+         MAIN NOTES CONTENT
+    ========================================== -->
+
+    <main class="notes-main">
+      <!-- PAGE HERO -->
+
+      <section class="notes-hero">
+        <span class="hero-icon"> 📚 </span>
+
+        <h1>Notes & PYQs</h1>
+
+        <p>
+          Previous Year Questions and study resources organized by branch and
+          examination.
+        </p>
+
+        <div class="hero-line"></div>
+      </section>
+
+      <!-- =====================================
+           TG ECET
+      ====================================== -->
+
+      <section id="tg-ecet" class="notes-section">
+        <div class="section-heading">
+          <span class="section-icon"> 🎯 </span>
+
+          <div>
+            <h2>TG ECET Roadmap</h2>
+
+            <p>Roadmap for TG ECET preparation</p>
+          </div>
+        </div>
+
+        <div class="resource-grid">
+          <a
+            href="files(pyqs)/tsecet.png"
+            target="_blank"
+            class="resource-card roadmap-card"
+          >
+            <div class="card-icon">🗺️</div>
+
+            <div class="card-content">
+              <h3>TG ECET Roadmap</h3>
+
+              <p>Complete preparation roadmap</p>
+
+              <span class="open-resource"> Open Roadmap → </span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- =====================================
+           COMPUTER SCIENCE
+      ====================================== -->
+
+      <section id="computer" class="notes-section">
+        <div class="section-heading">
+          <span class="section-icon"> 💻 </span>
+
+          <div>
+            <h2>Computer Science & Engineering</h2>
+
+            <p>GATE Booster • Previous Year Questions</p>
+          </div>
+        </div>
+
+        <div class="resource-grid">
+          <a
+            href="files(pyqs)/cse2021.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2021</span>
+            <h3>Computer Science PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/cse2022.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2022</span>
+            <h3>Computer Science PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/cse2023.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2023</span>
+            <h3>Computer Science PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/cse2024.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2024</span>
+            <h3>Computer Science PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- =====================================
+           ELECTRICAL
+      ====================================== -->
+
+      <section id="electrical" class="notes-section">
+        <div class="section-heading">
+          <span class="section-icon"> ⚡ </span>
+
+          <div>
+            <h2>Electrical Engineering</h2>
+
+            <p>GATE Booster • Previous Year Questions</p>
+          </div>
+        </div>
+
+        <div class="resource-grid">
+          <a
+            href="files(pyqs)/eee2021.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2021</span>
+            <h3>Electrical Engineering PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/eee2022.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2022</span>
+            <h3>Electrical Engineering PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/eee2023.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2023</span>
+            <h3>Electrical Engineering PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/eee2024.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2024</span>
+            <h3>Electrical Engineering PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- =====================================
+           ELECTRONICS
+      ====================================== -->
+
+      <section id="electronics" class="notes-section">
+        <div class="section-heading">
+          <span class="section-icon"> 🔌 </span>
+
+          <div>
+            <h2>Electronics & Communication Engineering</h2>
+
+            <p>GATE Booster • Previous Year Questions</p>
+          </div>
+        </div>
+
+        <div class="resource-grid">
+          <a
+            href="files(pyqs)/EI2020.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2020</span>
+            <h3>Electronics PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/EI2021.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2021</span>
+            <h3>Electronics PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/EI2023.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2023</span>
+            <h3>Electronics PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/EI2024.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2024</span>
+            <h3>Electronics PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- =====================================
+           CIVIL
+      ====================================== -->
+
+      <section id="civil" class="notes-section">
+        <div class="section-heading">
+          <span class="section-icon"> 🏗️ </span>
+
+          <div>
+            <h2>Civil Engineering</h2>
+
+            <p>GATE Booster • Previous Year Questions</p>
+          </div>
+        </div>
+
+        <div class="resource-grid">
+          <a
+            href="files(pyqs)/civil2021.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2021</span>
+            <h3>Civil Engineering PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/civil2022.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2022</span>
+            <h3>Civil Engineering PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/civil2023.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2023</span>
+            <h3>Civil Engineering PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/civil2024.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2024</span>
+            <h3>Civil Engineering PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- =====================================
+           MECHANICAL
+      ====================================== -->
+
+      <section id="mechanical" class="notes-section">
+        <div class="section-heading">
+          <span class="section-icon"> ⚙️ </span>
+
+          <div>
+            <h2>Mechanical Engineering</h2>
+
+            <p>GATE Booster • Previous Year Questions</p>
+          </div>
+        </div>
+
+        <div class="resource-grid">
+          <a
+            href="files(pyqs)/mech2020.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2020</span>
+            <h3>Mechanical Engineering PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/mech2021.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2021</span>
+            <h3>Mechanical Engineering PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/mech2022.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2022</span>
+            <h3>Mechanical Engineering PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/mech2024.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2024</span>
+            <h3>Mechanical Engineering PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- =====================================
+           CHEMICAL
+      ====================================== -->
+
+      <section id="chemical" class="notes-section">
+        <div class="section-heading">
+          <span class="section-icon"> 🧪 </span>
+
+          <div>
+            <h2>Chemical Engineering</h2>
+
+            <p>GATE Booster • Previous Year Questions</p>
+          </div>
+        </div>
+
+        <div class="resource-grid">
+          <a
+            href="files(pyqs)/CM2020.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2020</span>
+            <h3>Chemical Engineering PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/CM2021.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2021</span>
+            <h3>Chemical Engineering PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/CM2023.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2023</span>
+            <h3>Chemical Engineering PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/CM2024.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2024</span>
+            <h3>Chemical Engineering PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- =====================================
+           NEET
+      ====================================== -->
+
+      <section id="medical" class="notes-section">
+        <div class="section-heading">
+          <span class="section-icon"> 🩺 </span>
+
+          <div>
+            <h2>NEET Booster</h2>
+
+            <p>Previous Year Questions</p>
+          </div>
+        </div>
+
+        <div class="resource-grid">
+          <a
+            href="files(pyqs)/neet2019.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2019</span>
+            <h3>NEET PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/neet2020.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2020</span>
+            <h3>NEET PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/neet2021.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2021</span>
+            <h3>NEET PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/neetpyq2022.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2022</span>
+            <h3>NEET PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/neet2023.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2023</span>
+            <h3>NEET PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/neet2024.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2024</span>
+            <h3>NEET PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/neet2024%20(3).pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2024</span>
+            <h3>NEET PYQs – Set 2</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+
+          <a
+            href="files(pyqs)/neet2025.pdf"
+            target="_blank"
+            class="resource-card"
+          >
+            <span class="year">2025</span>
+            <h3>NEET PYQs</h3>
+            <span class="open-resource">Open PDF →</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- =====================================
+           ABOUT NOTES
+      ====================================== -->
+
+      <section class="notes-about">
+        <div class="about-icon">📖</div>
+
+        <h2>About Our Notes</h2>
+
+        <p>
+          Welcome to the Notes section of NextGen PYQs. Here you can access
+          organized previous year question papers and preparation resources
+          across engineering and medical disciplines.
+        </p>
+
+        <p>
+          Select a branch from the menu and access the required PYQs directly.
+          Resources open in a separate tab so you can continue browsing without
+          losing your place.
+        </p>
+      </section>
+
+      <!-- BACK TO TOP -->
+
+      <button
+        class="back-to-top"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      >
+        ↑ Back to Top
+      </button>
+    </main>
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="notes-footer">
+      <p>© 2026 NextGen PYQs. All rights reserved.</p>
+    </footer>
+
+    <!-- =========================================
+         USTAD CHAT BUTTON
+    ========================================== -->
+
+    <div id="ustadToggle" onclick="toggleUstad()">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+        <path
+          d="M12 2C6.48 2 2 6.02 2 11c0 2.25 1 4.29 2.64 5.85L4 22l5.34-1.4C10.36 20.85 11.17 21 12 21c5.52 0 10-4.02 10-9s-4.48-10-10-10z"
+        />
+      </svg>
+    </div>
+
+    <!-- =========================================
+         USTAD CHAT WINDOW
+    ========================================== -->
+
+    <div id="ustadWindow">
+      <div class="ustad-header">
+        <div class="ustad-avatar">🤖</div>
+
+        <div class="ustad-header-info">
+          <div class="ustad-name">Ustad</div>
+
+          <div class="ustad-status">Online • AI Mentor</div>
+        </div>
+
+        <div class="ustad-close" onclick="toggleUstad()">✕</div>
+      </div>
+
+      <div id="ustadMessages" class="ustad-messages">
+        <div class="ustad-msg bot">
+          <div class="bubble">
+            Hey! I'm Ustad 👋 Ask me anything about your subjects.
+          </div>
+
+          <span class="ustad-time"> Now </span>
+        </div>
+      </div>
+
+      <div class="ustad-input-row">
+        <input
+          id="ustadInput"
+          type="text"
+          placeholder="Type a message"
+          onkeydown="if (event.key === 'Enter') sendToUstad();"
+        />
+
+        <button onclick="sendToUstad()">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
+            <path d="M2 21l21-9L2 3v7l15 2-15 2z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- USTAD JS -->
+
+    <script src="javascript/ustad.js" defer></script>
   </body>
 </html>

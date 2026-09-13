@@ -45,18 +45,25 @@
       }
     </script>
   </head>
-
   <body>
-    <!-- NAVBAR -->
+    <!-- ONE combined top bar -->
     <div class="navbar">
       <div class="menu" onclick="openMenu()">☰</div>
 
-      <div class="logo">NextGen Notes</div>
+      <header>
+        <h3>NextGen Notes</h3>
+        <ul class="top-header-list">
+          <li onclick="window.location.href = 'learning.html'">🔥Tutorial</li>
+          <li onclick="window.location.href = 'notes.html'">Notes</li>
+          <li onclick="window.location.href = 'ai.html'">AI-EPR</li>
+          <li onclick="window.location.href = 'pyqs.html'">PYQS</li>
+          <li onclick="window.location.href = 'about.html'">About</li>
+        </ul>
+      </header>
     </div>
-
     <!-- SIDE MENU -->
     <div class="side-menu" id="sideMenu">
-      <div onclick="closeMenu()">✕</div>
+      <div onclick="closeMenu()"> ✕ Close Menu</div>
 
       <div class="navelement" onclick="window.location.href = 'index.html'">
         🏠 Home
@@ -67,7 +74,10 @@
       </div>
 
       <div class="navelement" onclick="window.location.href = '#cse'">
-        💻 CSE
+        💻 Computer Science Engineering / IT
+      </div>
+      <div class="navelement" onclick="window.location.href = '#ece'">
+        💻 Electronical Communication ECE
       </div>
 
       <div class="navelement" onclick="window.location.href = 'pyqs.html'">
@@ -113,20 +123,26 @@
           <!-- Maths -->
           <div
             class="notes-card"
-            onclick="window.location.href = 'maths-notes.html'"
+            onclick="
+              window.location.href =
+                'https://drive.google.com/file/d/1l-L4u1iMiKhuSZBePDezE9W0RF-oS_AF/view?usp=sharing'
+            "
           >
             <img src="images/maths.jpg" alt="Maths Notes" />
 
             <div class="notes-card-info">
               <h3>Important Maths Notes</h3>
-              <p>Easy to understand</p>
+              <p>Full Differentiation</p>
             </div>
           </div>
 
           <!-- Python -->
           <div
             class="notes-card"
-            onclick="window.location.href = 'python-notes.html'"
+            onclick="
+              window.location.href =
+                'https://drive.google.com/file/d/1-xFGH-ggRhT5l26Jxs903bN21xa_1vGw/view?usp=drive_link'
+            "
           >
             <img src="images/python.jpg" alt="Python Notes" />
 
@@ -139,7 +155,10 @@
           <!-- C -->
           <div
             class="notes-card"
-            onclick="window.location.href = 'c-notes.html'"
+            onclick="
+              window.location.href =
+                'https://drive.google.com/file/d/1iUjuNSm2lZMRfokrHcTpvFIPIzWUs9E-/view?usp=drive_link'
+            "
           >
             <img src="images/c.jpg" alt="C Notes" />
 
@@ -151,7 +170,10 @@
           <!-- C++ -->
           <div
             class="notes-card"
-            onclick="window.location.href = 'cpp-notes.html'"
+            onclick="
+              window.location.href =
+                'https://drive.google.com/file/d/1AO6EIwMmS29EL7TjI6AaXkle69YiOaey/view?usp=drive_link'
+            "
           >
             <img src="images/cpp.png" alt="C++ Notes" />
 
@@ -163,7 +185,10 @@
           <!-- Java -->
           <div
             class="notes-card"
-            onclick="window.location.href = 'java-notes.html'"
+            onclick="
+              window.location.href =
+                'https://drive.google.com/file/d/1v5JtBZSadIGv-Edt5ABHU8Eq48NvOXyV/view?usp=drive_link'
+            "
           >
             <img src="images/java.jpg" alt="Java Notes" />
 
@@ -172,23 +197,86 @@
             </div>
           </div>
 
-          <!-- DBMS -->
+          <!--DSA-->
           <div
             class="notes-card"
-            onclick="window.location.href = 'dbms-notes.html'"
+            onclick="
+              window.location.href =
+                'https://drive.google.com/file/d/1mtDssHkTN-5QmNC184yCeOBgFu2wEBZm/view?usp=sharing'
+            "
           >
-            <img src="images/rdbms.jpg" alt="DBMS Notes" />
+            <img src="images/DSA.jpg" alt="DSA Notes" />
 
             <div class="notes-card-info">
-              <h3>DBMS</h3>
-              <p>Theory + SQL</p>
+              <h3>DSA Notes</h3>
+              <p>Data Structures and Algorithms through C</p>
+            </div>
+          </div>
+          <!--DAA-->
+          <div
+            class="notes-card"
+            onclick="
+              window.location.href =
+                'https://drive.google.com/file/d/1Dpih2RgXxEvkjspt5lG4i5Ah5PGkhhVa/view?usp=sharing'
+            "
+          >
+            <img src="images/daa.jpg" alt="DAA Notes" />
+
+            <div class="notes-card-info">
+              <h3>Design and Analysis of ALGORITHMS Part 2 out of 5</h3>
+              <p>enjoy the clear notes and depth in concepts</p>
+            </div>
+          </div>
+          <!--Computer Hardware-->
+          <div
+            class="notes-card"
+            onclick="
+              window.location.href =
+                'https://drive.google.com/file/d/1DYsFfZ4wPqO1ROAAieWkA2gRc7BA6mPb/view?usp=drive_link'
+            "
+          >
+            <img src="images/chn.jpg" alt="Computer Networks Notes" />
+
+            <div class="notes-card-info">
+              <h3>Computer Hardware & Networkings Notes</h3>
+              <p>computer networkings and basics</p>
+            </div>
+          </div>
+          <!--DE1-->
+          <div
+            class="notes-card"
+            onclick="
+              window.location.href =
+                'https://drive.google.com/file/d/1DYsFfZ4wPqO1ROAAieWkA2gRc7BA6mPb/view?usp=drive_link'
+            "
+          >
+            <img src="images/de.jpg" alt="Computer Networks Notes" />
+
+            <div class="notes-card-info">
+              <h3>Digital Electronics</h3>
+              <p>Part 1 in depth</p>
+            </div>
+          </div>
+          <!--DE2-->
+          <div
+            class="notes-card"
+            onclick="
+              window.location.href =
+                'https://drive.google.com/file/d/1DYsFfZ4wPqO1ROAAieWkA2gRc7BA6mPb/view?usp=drive_link'
+            "
+          >
+            <img src="images/de.jpg" alt="Computer Networks Notes" />
+
+            <div class="notes-card-info">
+              <h3>Digital Electronics</h3>
+              <p>Part 2 in depth</p>
             </div>
           </div>
 
           <!-- Web Development -->
           <div
             class="notes-card"
-            onclick="window.location.href = 'webdev-notes.html'"
+            onclick="window.location.href = 'https://www.rgmcet.edu.in/assets/img/departments/CSE/materials/R15/3-2/Web%20Technologies.pdf'"
           >
             <img src="images/webdev.jpg" alt="Web Development Notes" />
 
@@ -200,14 +288,38 @@
           <!-- Discrete Math -->
           <div
             class="notes-card"
-            onclick="window.location.href = 'dm-notes.html'"
+            onclick="
+              window.location.href =
+                'https://drive.google.com/file/d/15HryLvhYhEKqP1k-qvqH28M3xPQLnVxp/view?usp=sharing'
+            "
           >
-            <img src="images/dm.jpg" alt="Discrete Mathematics Notes" />
+            <img src="images/dm.jpg" alt="Discrete Maths" />
 
             <div class="notes-card-info">
-              <h3>Discrete Mathematics</h3>
+              <h3>Discrete Mathematics Part 1 out of 5</h3>
+              <p>Violent Concepts in Simple Way</p>
             </div>
           </div>
+          <!-- Discrete Math -->
+          <div
+            class="notes-card"
+            onclick="
+              window.location.href =
+                'https://drive.google.com/file/d/1e9snztOsfkMVdgD_2yOuNYWLYCuWMgBR/view?usp=drive_link'
+            "
+          >
+            <img src="images/dm.jpg" alt="Discrete Maths" />
+
+            <div class="notes-card-info">
+              <h3>
+                Discrete Mathematics Part 2 out of 5 next part coming soon
+                ins....
+              </h3>
+              <p>Violent Concepts in Simple Way</p>
+            </div>
+          </div>
+          
+          
         </div>
         <!-- closes notes-card-grid -->
       </section>
@@ -256,6 +368,79 @@
         </button>
       </div>
     </div>
+<div class="main">
+      <section class="notes-section">
+        <h1 class="notes-section-title" id="ece">
+          Core Electronical Communication Engineering
+        </h1>
+
+        <p class="notes-section-subtitle">
+          Download comprehensive study materials and reference guides.
+        </p>
+
+        <!-- NOTES CARDS -->
+        <div class="notes-card-grid">
+          <!-- Maths -->
+          <div
+            class="notes-card"
+            onclick="
+              window.location.href =
+                'https://drive.google.com/file/d/1l-L4u1iMiKhuSZBePDezE9W0RF-oS_AF/view?usp=sharing'
+            "
+          >
+            <img src="images/maths.jpg" alt="Maths Notes" />
+
+            <div class="notes-card-info">
+              <h3>Important Maths Notes</h3>
+              <p>Full Differentiation</p>
+            </div>
+          </div>
+          <!--Basic Electronics And Sensors-->
+          <div
+            class="notes-card"
+            onclick="
+              window.location.href =
+                'https://drive.google.com/file/d/1VFBjozqQqXuvr_4B4KKq-R0Zs9xM8Yjs/view?usp=drive_link'
+            "
+          >
+            <img src="images/de.jpg" alt="Computer Networks Notes" />
+
+            <div class="notes-card-info">
+              <h3>Basic Electronics And Sensors</h3>
+              <p>Part 1 in depth</p>
+            </div>
+          </div>
+          <!--DE1-->
+          <div
+            class="notes-card"
+            onclick="
+              window.location.href =
+                'https://drive.google.com/file/d/1DYsFfZ4wPqO1ROAAieWkA2gRc7BA6mPb/view?usp=drive_link'
+            "
+          >
+            <img src="images/de.jpg" alt="Computer Networks Notes" />
+
+            <div class="notes-card-info">
+              <h3>Digital Electronics</h3>
+              <p>Part 1 in depth</p>
+            </div>
+          </div>
+          <!--DE2-->
+          <div
+            class="notes-card"
+            onclick="
+              window.location.href =
+                'https://drive.google.com/file/d/1DYsFfZ4wPqO1ROAAieWkA2gRc7BA6mPb/view?usp=drive_link'
+            "
+          >
+            <img src="images/de.jpg" alt="Computer Networks Notes" />
+
+            <div class="notes-card-info">
+              <h3>Digital Electronics</h3>
+              <p>Part 2 in depth</p>
+            </div>
+          </div>
+
 
     <!-- Ustad logic lives in javascript/ustad.js — loaded once, here, deferred -->
     <script src="javascript/ustad.js" defer></script>

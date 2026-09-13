@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/ai.css" />
     <link rel="stylesheet" href="css/index.css" />
     <script>
       function openMenu() {
@@ -26,9 +27,20 @@
     </script>
   </head>
   <body>
+    <!-- ONE combined top bar -->
     <div class="navbar">
       <div class="menu" onclick="openMenu()">☰</div>
-      <div class="logo">NextGen Mentor</div>
+
+      <header>
+        <h3>NextGen Mentor</h3>
+        <ul class="top-header-list">
+          <li onclick="window.location.href = 'learning.html'">🔥Tutorial</li>
+          <li onclick="window.location.href = 'notes.html'">Notes</li>
+          <li onclick="window.location.href = 'ai.html'">AI-EPR</li>
+          <li onclick="window.location.href = 'pyqs.html'">PYQS</li>
+          <li onclick="window.location.href = 'about.html'">About</li>
+        </ul>
+      </header>
     </div>
 
     <div class="side-menu" id="sideMenu">
@@ -73,5 +85,97 @@
       <div onclick="switchmode()" class="navelement">🌗 Switch mode</div>
     </div>
     <div class="main"></div>
+    <!-- Ustad Chat Button -->
+    <div id="ustadToggle" onclick="toggleUstad()">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+        <path
+          d="M12 2C6.48 2 2 6.02 2 11c0 2.25 1 4.29 2.64 5.85L4 22l5.34-1.4C10.36 20.85 11.17 21 12 21c5.52 0 10-4.02 10-9s-4.48-10-10-10z"
+        />
+      </svg>
+    </div>
+
+    <!-- Ustad Chat Window -->
+    <div id="ustadWindow">
+      <div class="ustad-header">
+        <div class="ustad-avatar">🤖</div>
+        <div class="ustad-header-info">
+          <div class="ustad-name">Ustad</div>
+          <div class="ustad-status">Online • AI Mentor</div>
+        </div>
+        <div class="ustad-close" onclick="toggleUstad()">✕</div>
+      </div>
+
+      <div id="ustadMessages" class="ustad-messages">
+        <div class="ustad-msg bot">
+          <div class="bubble">
+            Hey! I'm Ustad 👋 Ask me anything about your subjects.
+          </div>
+          <span class="ustad-time">Now</span>
+        </div>
+      </div>
+
+      <div class="ustad-input-row">
+        <input
+          id="ustadInput"
+          type="text"
+          placeholder="Type a message"
+          onkeydown="if (event.key === 'Enter') sendToUstad();"
+        />
+        <button onclick="sendToUstad()">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
+            <path d="M2 21l21-9L2 3v7l15 2-15 2z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Ustad logic lives in javascript/ustad.js — loaded once, here, deferred -->
+    <script src="javascript/ustad.js" defer></script>
+    <!-- Ustad Chat Button -->
+    <div id="ustadToggle" onclick="toggleUstad()">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+        <path
+          d="M12 2C6.48 2 2 6.02 2 11c0 2.25 1 4.29 2.64 5.85L4 22l5.34-1.4C10.36 20.85 11.17 21 12 21c5.52 0 10-4.02 10-9s-4.48-10-10-10z"
+        />
+      </svg>
+    </div>
+
+    <!-- Ustad Chat Window -->
+    <div id="ustadWindow">
+      <div class="ustad-header">
+        <div class="ustad-avatar">🤖</div>
+        <div class="ustad-header-info">
+          <div class="ustad-name">Ustad</div>
+          <div class="ustad-status">Online • AI Mentor</div>
+        </div>
+        <div class="ustad-close" onclick="toggleUstad()">✕</div>
+      </div>
+
+      <div id="ustadMessages" class="ustad-messages">
+        <div class="ustad-msg bot">
+          <div class="bubble">
+            Hey! I'm Ustad 👋 Ask me anything about your subjects.
+          </div>
+          <span class="ustad-time">Now</span>
+        </div>
+      </div>
+
+      <div class="ustad-input-row">
+        <input
+          id="ustadInput"
+          type="text"
+          placeholder="Type a message"
+          onkeydown="if (event.key === 'Enter') sendToUstad();"
+        />
+        <button onclick="sendToUstad()">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
+            <path d="M2 21l21-9L2 3v7l15 2-15 2z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Ustad logic lives in javascript/ustad.js — loaded once, here, deferred -->
+    <script src="javascript/ustad.js" defer></script>
   </body>
 </html>

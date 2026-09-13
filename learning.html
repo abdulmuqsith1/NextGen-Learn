@@ -1,99 +1,1094 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomePage</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Zone | NextGen Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/learning.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <script>
-
-function openMenu() {
-
-    document.getElementById("sideMenu")
-        .classList.add("active"); //it add a class active to existing class sideMenu
-
-}
-
-function closeMenu() {
-
-    document.getElementById("sideMenu")
-        .classList.remove("active");
-
-}
-function switchmode() {
-
-    document.body.classList.toggle("light-mode");
-
-}
-
-</script>
-</head>
-<body>
-<div class="navbar">
-
-    <div class="menu" onclick="openMenu()">
-        ☰     
-    </div>
-    <div class="logo">
-        NextGen Learning
+      function openMenu() {
+        document.getElementById("sideMenu").classList.add("active");
+      }
+      function closeMenu() {
+        document.getElementById("sideMenu").classList.remove("active");
+      }
+      function switchmode() {
+        document.body.classList.toggle("light-mode");
+      }
+    </script>
+  </head>
+  <body>
+    <!-- ONE combined top bar -->
+    <div class="navbar">
+      <div class="menu" onclick="openMenu()">☰</div>
+      <header>
+        <h3>NextGen Learning</h3>
+        <ul class="top-header-list">
+          <li onclick="window.location.href = 'learning.html'">🔥Tutorial</li>
+          <li onclick="window.location.href = 'notes.html'">Notes</li>
+          <li onclick="window.location.href = 'ai.html'">AI-EPR</li>
+          <li onclick="window.location.href = 'pyqs.html'">PYQS</li>
+          <li onclick="window.location.href = 'about.html'">About</li>
+        </ul>
+      </header>
     </div>
 
-    
+    <div class="side-menu" id="sideMenu">
+      <div onclick="closeMenu()">✕</div>
+      <div class="navelement" onclick="window.location.href = 'index.html'">
+        🏠 Home
+      </div>
+      <div class="navelement" onclick="window.location.href = 'learning.html'">
+        🧠 Learning Zone
+      </div>
+      <div class="navelement" onclick="window.location.href = '#computer'">
+        💻 Computer Science
+      </div>
 
-</div>
+      <div class="navelement" onclick="window.location.href = '#cyber-sec'">
+        🔐 Cyber Security
+      </div>
 
+      <div class="navelement" onclick="window.location.href = '#civil'">
+        🏗️ Civil
+      </div>
 
-<div class="side-menu" id="sideMenu">
+      <div class="navelement" onclick="window.location.href = '#mechanical'">
+        ⚙️ Mechanical
+      </div>
 
-    <div onclick="closeMenu()">✕</div>
+      <div class="navelement" onclick="window.location.href = '#electrical'">
+        ⚡ Electrical
+      </div>
 
- <div class="navelement" onclick="window.location.href='index.html'">
-    🏠 Home
-</div>
+      <div class="navelement" onclick="window.location.href = '#medical'">
+        🩺 Medical
+      </div>
+      <div class="navelement" onclick="window.location.href = 'notes.html'">
+        📝 Notes
+      </div>
+      <div class="navelement" onclick="window.location.href = 'pyqs.html'">
+        📚 PYQs
+      </div>
+      <div class="navelement" onclick="window.location.href = 'ai.html'">
+        🤖 AI Exam Assistant
+      </div>
+      <div class="navelement" onclick="window.location.href = 'quiz.html'">
+        ✏️ Quiz
+      </div>
+      <div class="navelement" onclick="window.location.href = 'mentor.html'">
+        🎓 Mentor
+      </div>
+      <div class="navelement" onclick="window.location.href = 'nextgen.html'">
+        🚀 NextGen Learning
+      </div>
+      <div class="navelement" onclick="window.location.href = 'about.html'">
+        ℹ️ About
+      </div>
+      <div onclick="switchmode()" class="navelement">🌗 Switch mode</div>
+    </div>
 
-<div class="navelement" onclick="window.location.href='learning.html'">
-    🧠 Learning Zone
-</div>
+    <div class="main">
+      <!-- HERO -->
+      <section class="learning-hero">
+        <div class="learning-hero-content">
+          <h1>Welcome to Learning Zone</h1>
+          <p>
+            Find curated tutorials across Computer Science, Cyber Security,
+            Civil, Electrical, Mechanical, and Medical fields. Enjoy smooth
+            transitions, intuitive controls, and easy navigation while you
+            learn.
+          </p>
+          <p>
+            At NextGen Learning, we're committed to continuous improvement and
+            innovation in education. Our Learning Zone is regularly updated with
+            new tutorials and emerging topics.
+          </p>
+          <p>
+            For those seeking personalized guidance, our platform offers
+            opportunities to connect with mentors and subject experts who can
+            provide tailored advice, study strategies, and career insights.
+          </p>
+          <a href="#computer" class="hero-cta">Explore Tutorials</a>
+        </div>
+      </section>
 
-<div class="navelement" onclick="window.location.href='notes.html'">
-    📝 Notes
-</div>
+      <!-- COMPUTER SCIENCE -->
+      <h2 class="category-title" id="computer">
+        Core Computer Science Programming Tutorials
+      </h2>
+      <div class="tutorial-container">
+        <div class="tcard">
+          <a
+            href="https://youtu.be/irqbmMNs2Bo?si=vhAl5uWm436Uttvs"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/irqbmMNs2Bo/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>C Programming</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/mlIUKyZIUUU?si=0pePIh4OVLG73yMC"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/mlIUKyZIUUU/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>C++ Programming</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/UrsmFxEIp5k?si=lb0yrbXcEL9jh1sT"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/UrsmFxEIp5k/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Python Programming</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/M0mx8S05v60?si=zRneNsx44Ea2IBPW"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/M0mx8S05v60/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Digital Electronics</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/bm0OyhwFDuY?si=RCvj-CrPCjxDd2jm"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/bm0OyhwFDuY/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Java Programming</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/kBdlM6hNDAE?si=Tf3E6y9LpXj76j_3"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/kBdlM6hNDAE/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Database Management System</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/HcOc7P5BMi4?si=FDPVtXKJ0zXvAtGC"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/HcOc7P5BMi4/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Web Technology</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/L9X7XXfHYdU?si=CWQl330HfYUy6chs"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/L9X7XXfHYdU/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Computer Architecture</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/uJpQlyT_CK4?si=Rm-riAKETpjGM-6i"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/uJpQlyT_CK4/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Software Engineering</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/bkSWJJZNgf8?si=UQVYEvqi1Pvx3nnU"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/bkSWJJZNgf8/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Operating Systems</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/JFF2vJaN0Cw?si=YbJnGntY3wftI-ZN"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/JFF2vJaN0Cw/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Computer Networking</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/JoeiLuFNBc4?si=mOv1hZgKwueYSHfZ"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/JoeiLuFNBc4/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Network Security</p></div></a
+          >
+        </div>
+      </div>
 
-<div class="navelement" onclick="window.location.href='pyqs.html'">
-    📚 PYQs
-</div>
+      <!-- CYBER SECURITY -->
+      <h2 class="category-title" id="cyber-sec">
+        Core Cyber Security Tutorials
+      </h2>
+      <div class="tutorial-container">
+        <div class="tcard">
+          <a
+            href="https://youtu.be/BgNUM8D9Faw?si=jjlY3Jdd0omiokbv"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/BgNUM8D9Faw/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Arduino Programming</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/gzTNZuXHArs?si=krd770LQXah8n00B"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/gzTNZuXHArs/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Cyber Security Fundamentals</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/cKEf8H9cQGM?si=pqJfscHKfIbFPS-V"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/cKEf8H9cQGM/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text">
+              <p>Cyber Security: Ethical Hacking Full Course</p>
+            </div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/bkSWJJZNgf8?si=UQVYEvqi1Pvx3nnU"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/bkSWJJZNgf8/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Operating Systems</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/JFF2vJaN0Cw?si=YbJnGntY3wftI-ZN"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/JFF2vJaN0Cw/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Computer Networking</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/JoeiLuFNBc4?si=mOv1hZgKwueYSHfZ"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/JoeiLuFNBc4/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Network Security</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/O0gtKDu_cJc?si=zgFd_CSunO-5cbsL"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/O0gtKDu_cJc/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Digital Electronics</p></div></a
+          >
+        </div>
+      </div>
 
-<div class="navelement" onclick="window.location.href='ai.html'">
-    🤖 AI Exam Assistant
-</div>
+      <!-- CIVIL -->
+      <h2 class="category-title" id="civil">Civil Engineering Tutorials</h2>
+      <div class="tutorial-container">
+        <div class="tcard">
+          <a
+            href="https://youtu.be/eiVmi6uNcXo?si=Uu0jF3aPKGiDZJFp"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/eiVmi6uNcXo/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text">
+              <p>Civil Engineering Basics and Mechanics</p>
+            </div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/gp3oKSEnEFM?si=ZhksgK7je1eV-z2U"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/gp3oKSEnEFM/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Engineering Drawing</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/Kp-2F0vLvAM?si=YZcpzzazipjvOklK"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/Kp-2F0vLvAM/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Surveying</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/xlTf2UnlXg0?si=LEveEMDjwx6oSSEO"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/xlTf2UnlXg0/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Fluid Mechanics</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/n3UK6FjN_BY?si=A_YeBGYa5I2hb2m2"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/n3UK6FjN_BY/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text">
+              <p>Strength of Materials Engineering</p>
+            </div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/VmrhS-a3oig?si=uSE5aFueVUD_rXqE"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/VmrhS-a3oig/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>HHM</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/gQdn4952w-U?si=Jqr52l8VfudWIQOL"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/gQdn4952w-U/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>CPM</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/KSHENgD-WhA?si=hj_gCN-7U5XK3ST1"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/KSHENgD-WhA/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Geotechnical Engineering</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/b9qYyNq-c5E?si=HKH-4nrwLFGqOAFj"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/b9qYyNq-c5E/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Structural Analysis</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/7XLnx7-HPMU?si=TAogDD4zg9qP0QaA"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/7XLnx7-HPMU/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Steel Structures</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/pIdaC_I6H_M?si=PxxeWRr1y6rGIwhK"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/pIdaC_I6H_M/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text">
+              <p>Concrete Engineering — IIT Kharagpur</p>
+            </div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/NlnxoQ-EVfc?si=0_8YcwbBHNEcFv-U"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/NlnxoQ-EVfc/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text">
+              <p>Costing, Estimation and Project Management</p>
+            </div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/Niq1i-oM1-M?si=l2rL2hi-lZzwffj6"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/Niq1i-oM1-M/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Computer Aided Design - CAD</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/AfzmP-nUvX8?si=a5KgZPymC4-i_vM_"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/AfzmP-nUvX8/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Quality Evaluation</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/6f3bvIhSWyM?si=EbsHElaKwczndJQd"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/6f3bvIhSWyM/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Robotics and Automation</p></div></a
+          >
+        </div>
+      </div>
 
-<div class="navelement" onclick="window.location.href='quiz.html'">
-    ✏️ Quiz
-</div>
+      <!-- MECHANICAL -->
+      <h2 class="category-title" id="mechanical">
+        Mechanical Engineering Tutorials
+      </h2>
+      <div class="tutorial-container">
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/Kr4ijuj6llM?si=9hk0x4Np0r5NK83p"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/Kr4ijuj6llM/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Thermodynamics — Introduction</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/HEfHFsfGXjs"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/HEfHFsfGXjs/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Fluid Mechanics Basics</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/Uf4BtghMLI8?si=-Hj3VUdtlRTY12V_"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/Uf4BtghMLI8/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Strength of Materials (SOM)</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/ONGxFMSKvyE?si=yN7itFYOrhxnjB-f"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/ONGxFMSKvyE/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Theory of Machines</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/060419AMIAg?si=vHgrjTyhmqHJJ5IB"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/060419AMIAg/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Machine Design Basics</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/OvbSR3w61lQ?si=eZQf-GLyRD7A-0Br"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/OvbSR3w61lQ/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Engineering Mechanics</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/RJeCGNSGMLk?si=NK8weVYh0Oas5Rra"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/RJeCGNSGMLk/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Heat Transfer Basics</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/Um_g8sQ_p3Y?si=mc37jvhMskGbkP8B"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/Um_g8sQ_p3Y/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Manufacturing Engineering</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/NlnxoQ-EVfc?si=0_8YcwbBHNEcFv-U"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/NlnxoQ-EVfc/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text">
+              <p>Costing, Estimation and Project Management</p>
+            </div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/Niq1i-oM1-M?si=l2rL2hi-lZzwffj6"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/Niq1i-oM1-M/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Computer Aided Design - CAD</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/AfzmP-nUvX8?si=a5KgZPymC4-i_vM_"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/AfzmP-nUvX8/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Quality Evaluation</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/6f3bvIhSWyM?si=EbsHElaKwczndJQd"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/6f3bvIhSWyM/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Robotics and Automation</p></div></a
+          >
+        </div>
+      </div>
 
-<div class="navelement" onclick="window.location.href='mentor.html'">
-    🎓 Mentor
-</div>
+      <!-- ELECTRICAL -->
+      <h2 class="category-title" id="electrical">
+        Electrical Engineering Tutorials
+      </h2>
+      <div class="tutorial-container">
+        <div class="tcard">
+          <a
+            href="https://youtu.be/etV8ff-Rw2M?si=5bDFsP9guYLgxlLw"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/etV8ff-Rw2M/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Basic Electrical Engineering</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/NEhH6C7Fzw4?si=Wf-TRBSt4VRMwqRE"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/NEhH6C7Fzw4/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Network Theory</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/9UXRwXmdvRs?si=-aBwfoB6OZMw2xE0"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/9UXRwXmdvRs/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Network Analysis</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/w_pC7v97Bzs?si=yDnlcB1uwO6mbeyu"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/w_pC7v97Bzs/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Electrical Machines</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/zc1nL7cEYxU?si=uvAHh2jqdd4Diw9O"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/zc1nL7cEYxU/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Power Systems</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/000S4xF7EJQ?si=klgjGV2OhC7ESsz6"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/000S4xF7EJQ/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Control Systems</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/ItXH3eozfss?si=dUOQB1AOYYLlJaMA"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/ItXH3eozfss/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Power Electronics</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/s8rsR_TStaA?si=xdWRDPvEpCuXe9i6"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/s8rsR_TStaA/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Signals and Systems</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/_I-g0CFmXKg?si=4nmvBTwUe5axbqne"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/_I-g0CFmXKg/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Electrical Measurements</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/T3lQhtnKAuI?si=16BVckAXBxCkWHyK"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/T3lQhtnKAuI/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>High Voltage Engineering</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/roxuawcqzCA?si=Xty3daOVGyCqur66"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/roxuawcqzCA/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Renewable Energy Systems</p></div></a
+          >
+        </div>
+      </div>
 
-<div class="navelement" onclick="window.location.href='nextgen.html'">
-    🚀 NextGen Learning
-</div>
+      <!-- MEDICAL -->
+      <h2 class="category-title" id="medical">Medical (MBBS) Tutorials</h2>
+      <div class="tutorial-container">
+        <div class="tcard">
+          <a
+            href="https://youtu.be/DXK2wuQAbxg?si=rLPJtgB9CUOh6FWN"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/DXK2wuQAbxg/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Human Anatomy</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/TeZb-rRvT2c?si=bovF5oVkwo0Znzz9"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/TeZb-rRvT2c/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Human Physiology</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/7hc1C9CE3Ls?si=lNIAlyoh8FYnYDD1"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/7hc1C9CE3Ls/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Biochemistry</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/_1X-I6ruuN0?si=JJXzRCp-_vtXpjYn"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/_1X-I6ruuN0/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Pathology</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/GGtwJ-SGXTA?si=NGDvPSgRxxbDL3yE"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/GGtwJ-SGXTA/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Pharmacology</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/LjlVr0FHVk8?si=Quk9Fq5NNlI7Xx3Z"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/LjlVr0FHVk8/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Microbiology</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/nimqYIAoFiI?si=SWXk1k8L5nVHcZEM"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/nimqYIAoFiI/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Forensic Medicine</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://youtu.be/ng-nh-9pNz0?si=b2JG1ADF68XHJAHl"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/ng-nh-9pNz0/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>General Medicine</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/LWkY3Pxvcec?si=XxQMMOGF7qbdRfPt"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/LWkY3Pxvcec/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>General Surgery</p></div></a
+          >
+        </div>
+        <div class="tcard">
+          <a
+            href="https://www.youtube.com/live/VEVn8-_p2pI?si=67SDhTtLjN1qaFjQ"
+            target="_blank"
+            class="video-card"
+          >
+            <img
+              src="https://img.youtube.com/vi/VEVn8-_p2pI/hqdefault.jpg"
+              alt="Tutorial"
+            />
+            <div class="card-text"><p>Obstetrics & Gynecology</p></div></a
+          >
+        </div>
+      </div>
 
-<div class="navelement" onclick="window.location.href='about.html'">
-    ℹ️ About
-</div>
+      <button
+        class="back-to-top"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      >
+        ↑ Back to Top
+      </button>
+    </div>
 
-<div onclick="switchmode()" class="navelement">
-    🌗 Switch mode
-</div>
-</div>
-<div class="main">
+    <!-- Ustad Chat Button -->
+    <div id="ustadToggle" onclick="toggleUstad()">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+        <path
+          d="M12 2C6.48 2 2 6.02 2 11c0 2.25 1 4.29 2.64 5.85L4 22l5.34-1.4C10.36 20.85 11.17 21 12 21c5.52 0 10-4.02 10-9s-4.48-10-10-10z"
+        />
+      </svg>
+    </div>
+    <div id="ustadWindow">
+      <div class="ustad-header">
+        <div class="ustad-avatar">🤖</div>
+        <div class="ustad-header-info">
+          <div class="ustad-name">Ustad</div>
+          <div class="ustad-status">Online • AI Mentor</div>
+        </div>
+        <div class="ustad-close" onclick="toggleUstad()">✕</div>
+      </div>
+      <div id="ustadMessages" class="ustad-messages">
+        <div class="ustad-msg bot">
+          <div class="bubble">
+            Hey! I'm Ustad 👋 Ask me anything about your subjects.
+          </div>
+          <span class="ustad-time">Now</span>
+        </div>
+      </div>
+      <div class="ustad-input-row">
+        <input
+          id="ustadInput"
+          type="text"
+          placeholder="Type a message"
+          onkeydown="if (event.key === 'Enter') sendToUstad();"
+        />
+        <button onclick="sendToUstad()">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
+            <path d="M2 21l21-9L2 3v7l15 2-15 2z" />
+          </svg>
+        </button>
+      </div>
+    </div>
 
-
-</div>
-</body>
+    <script src="javascript/ustad.js" defer></script>
+  </body>
 </html>

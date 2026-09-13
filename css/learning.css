@@ -1,0 +1,632 @@
+/* ================================
+LEARNING HERO — animated glow/shimmer version
+================================ */
+
+.learning-hero {
+  position: relative;
+  background: linear-gradient(135deg, rgba(29, 57, 92, 0.95), rgba(20, 35, 54, 0.98));
+  color: #ebf7ff;
+  text-align: center;
+  padding: 60px 20px 50px;
+  border-radius: 40px;
+  margin: 20px auto 30px;
+  width: min(1140px, 96%);
+  box-shadow: 0 25px 50px rgba(1, 20, 40, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  animation: heroGlow 3s ease-in-out infinite alternate;
+}
+
+.learning-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(126, 203, 218, 0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+  pointer-events: none;
+}
+
+.learning-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #7ecbda, #c3a0d8, #7ecbda);
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+.learning-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.learning-hero-content h1 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #7ecbda, #c3a0d8, #7ecbda);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(126, 203, 218, 0.3);
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+.learning-hero-content p {
+  max-width: 820px;
+  margin: 0 auto 2rem;
+  color: #c9e7fb;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.hero-cta {
+  display: inline-block;
+  background: linear-gradient(135deg, #7ecbda, #c3a0d8);
+  color: #1a1a1a;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(126, 203, 218, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.hero-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(126, 203, 218, 0.5);
+}
+
+.hero-cta:hover::before {
+  left: 100%;
+}
+
+@keyframes heroGlow {
+  from { box-shadow: 0 25px 50px rgba(1, 20, 40, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1); }
+  to   { box-shadow: 0 30px 60px rgba(1, 20, 40, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.2); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes textGlow {
+  from { text-shadow: 0 0 20px rgba(126, 203, 218, 0.3); }
+  to   { text-shadow: 0 0 30px rgba(126, 203, 218, 0.6); }
+}
+
+/* ================================
+CATEGORY NAV (unchanged from your simple version)
+================================ */
+
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  padding: 10px 20px 30px;
+}
+
+.category-nav a {
+  color: #ebf7ff;
+  background: rgba(126, 203, 218, 0.15);
+  border: 1px solid rgba(126, 203, 218, 0.3);
+  padding: 8px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.category-nav a:hover {
+  background: rgba(126, 203, 218, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ================================
+CATEGORY TITLE — glowing gradient text
+================================ */
+
+.category-title {
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 1.9rem);
+  font-weight: 700;
+  margin: 45px auto 24px;
+  letter-spacing: 0.6px;
+  background: linear-gradient(90deg, #7ecbda, #c3a0d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ================================
+TUTORIAL CONTAINER — glassmorphism panel
+================================ */
+
+.tutorial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1140px;
+  margin: 0 auto 20px;
+  padding: 36px 28px;
+  background: linear-gradient(135deg, rgba(1, 77, 100, 0.35) 0%, rgba(28, 77, 90, 0.28) 100%);
+  border: 1px solid rgba(126, 203, 218, 0.18);
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.tutorial-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  border-color: rgba(126, 203, 218, 0.3);
+}
+
+/* ================================
+TUTORIAL CARD
+================================ */
+
+.tcard {
+  flex: 1 1 220px;
+  max-width: 260px;
+}
+
+.video-card {
+  display: block;
+  background: #0d1420;
+  border: 1px solid rgba(139, 123, 255, 0.25);
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.video-card:hover {
+  transform: translateY(-6px);
+  border-color: #7ecbda;
+  box-shadow: 0 12px 28px rgba(126, 203, 218, 0.25);
+}
+
+.video-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.video-card .card-text {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px 12px;
+  backdrop-filter: blur(5px);
+}
+
+.video-card .card-text p {
+  color: #e9edef;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ================================
+BACK TO TOP
+================================ */
+
+.back-to-top {
+  display: block;
+  margin: 30px auto 60px;
+  padding: 10px 22px;
+  background: #1f2c34;
+  color: #e9edef;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.back-to-top:hover {
+  background: #2a3942;
+  color: #06cf9c;
+}
+
+/* ================================
+RESPONSIVE — TABLET
+================================ */
+
+@media (max-width: 768px) {
+  .learning-hero {
+    padding: 45px 20px 40px;
+    margin: 15px 15px 25px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(1, 20, 40, 0.4);
+  }
+
+  .learning-hero-content h1 {
+    font-size: clamp(2rem, 7vw, 2.8rem);
+    margin-bottom: 1.2rem;
+  }
+
+  .learning-hero-content p {
+    font-size: 1.05rem;
+    max-width: 100%;
+  }
+
+  .tutorial-container {
+    width: 92%;
+    padding: 28px 18px;
+    gap: 18px;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .tcard {
+    width: 100%;
+    max-width: none;
+  }
+
+  .video-card img {
+    height: 140px;
+  }
+
+  .category-title {
+    margin: 35px auto 14px;
+  }
+}
+
+/* ================================
+RESPONSIVE — MOBILE
+================================ */
+
+@media (max-width: 480px) {
+  .learning-hero {
+    padding: 35px 15px 30px;
+    margin: 10px 10px 20px;
+    border-radius: 25px;
+  }
+
+  .learning-hero-content h1 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .tutorial-container {
+    width: 96%;
+    padding: 22px 14px;
+    gap: 16px;
+    border-radius: 22px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .video-card img {
+    height: 120px;
+  }
+
+  .video-card .card-text p {
+    font-size: 0.78rem;
+  }
+
+  .category-title {
+    font-size: 1.3rem;
+    margin: 28px auto 12px;
+  }
+}
+
+/* ================================
+USTAD CHAT — TOGGLE BUTTON
+================================ */
+
+#ustadToggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #00a884;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  z-index: 1100;
+  transition: transform 0.2s ease;
+}
+
+#ustadToggle:hover {
+  transform: scale(1.08);
+}
+
+#ustadWindow {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  width: 500px;
+  height: 600px;
+  background: #0b141a;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateY(20px);
+  color: #e9edef;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 1100;
+}
+
+#ustadWindow.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.ustad-header {
+  background: #202c33;
+  color: #e9edef;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #2a3942;
+}
+
+.ustad-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #00a884;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.ustad-header-info {
+  flex: 1;
+  line-height: 1.3;
+}
+
+.ustad-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #e9edef;
+}
+
+.ustad-status {
+  font-size: 0.75rem;
+  color: #8696a0;
+}
+
+.ustad-close {
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.8;
+  padding: 4px;
+  color: #aebac1;
+}
+
+.ustad-close:hover {
+  opacity: 1;
+}
+
+.ustad-messages {
+  flex: 1;
+  padding: 14px 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #0b141a;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.ustad-msg {
+  display: flex;
+  flex-direction: column;
+  max-width: 82%;
+}
+
+.ustad-msg.user {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.ustad-msg.bot {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.bubble {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.ustad-msg.user .bubble {
+  background: #005c4b;
+  color: #e9edef;
+  border-top-right-radius: 2px;
+}
+
+.ustad-msg.bot .bubble {
+  background: #1f2c34;
+  color: #e9edef;
+  border-top-left-radius: 2px;
+}
+
+.ustad-time {
+  font-size: 0.68rem;
+  color: #8696a0;
+  margin-top: 2px;
+  padding: 0 4px;
+}
+
+.ustad-msg.typing .bubble {
+  font-style: italic;
+  color: #8696a0;
+}
+
+.bubble pre {
+  background: #0a0f13;
+  color: #d1d7db;
+  padding: 10px 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 8px 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  border: 1px solid #2a3942;
+}
+
+.bubble code {
+  font-family: "Courier New", monospace;
+}
+
+.bubble p code, .bubble li code {
+  background: rgba(255, 255, 255, 0.08);
+  color: #d1d7db;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+.ustad-input-row {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background: #202c33;
+  gap: 8px;
+  border-top: 1px solid #2a3942;
+}
+
+.ustad-input-row input {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  color: #e9edef;
+  font-family: "Poppins", sans-serif;
+  border-radius: 20px;
+  outline: none;
+  font-size: 1rem;
+  background: #2a3942;
+}
+
+.ustad-input-row input::placeholder {
+  color: #8696a0;
+}
+
+.ustad-input-row button {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: #00a884;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.ustad-input-row button:hover {
+  background: #06cf9c;
+}
+
+.bubble strong {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.bubble em {
+  font-style: italic;
+}
+
+.bubble h4 {
+  font-size: 0.95rem;
+  margin: 10px 0 4px 0;
+  color: #06cf9c;
+}
+
+.bubble table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 8px 0;
+  font-size: 0.8rem;
+}
+
+.bubble th,
+.bubble td {
+  border: 1px solid #2a3942;
+  padding: 4px 8px;
+  text-align: left;
+}
+
+.bubble th {
+  background: #202c33;
+  color: #e9edef;
+  font-weight: 600;
+}
+
+.bubble td {
+  color: #d1d7db;
+}
+
+@media (max-width: 500px) {
+  #ustadWindow {
+    width: 92vw;
+    height: 70vh;
+    bottom: 84px;
+    right: 4vw;
+  }
+}
+
+@media (max-width: 460px) {
+  #ustadWindow {
+    width: 60vw;
+    height: 70vh;
+    bottom: 84px;
+    right: 4vw;
+  }
+}

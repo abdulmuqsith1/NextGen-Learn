@@ -7,8 +7,71 @@
     padding: 0;
     box-sizing: border-box;
 }
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  /* Option B: modern rgb() — space + slash syntax, no commas */
+  background: rgb(11 20 26 / 1); /* match your dark theme — set this to whatever your bar's actual color is */
+  opacity: 1;
+}
 
+.menu {
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  flex-shrink: 0;
+}
 
+header {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h3 {
+  color: white;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.top-header-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.top-header-list li {
+  cursor: pointer;
+  color: #e9edef;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+  padding: 5px;
+}
+
+.top-header-list li:hover {
+  color: #06cf9c;
+  border-radius: 10px;
+  background-color: #082326;
+  
+}
+
+/* Push page content down so it's not hidden under the now-fixed bar */
+.main {
+  margin-top: 60px;
+}
 /* ================================
    BODY
 ================================ */
@@ -28,31 +91,6 @@ body {
     color: white;
 }
 
-.navbar {
-    height: 50px;
-
-    display: flex;
-    align-items: center;
-    gap:20px;
-
-    padding: 0 30px;
-
-    background: rgba(0, 0, 0, 0.3);
-}
-
-.logo {
-    color: white;
-    font-size: 22px;
-    font-weight: 600;
-}
-
-.menu {
-    color: white;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-
 /* SIDE MENU */
 
 .side-menu {
@@ -64,6 +102,7 @@ body {
 
     width: 280px;
     height: 100vh;
+    margin-top: 50px;
 
     padding: 20px;
 
@@ -115,7 +154,7 @@ body {
     flex: 0 0 100%;
 
     padding: 25px;
-
+    margin-top: 30px;
     text-align: center;
 
     background: linear-gradient(

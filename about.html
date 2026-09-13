@@ -26,11 +26,21 @@
     </script>
   </head>
   <body>
+    <!-- ONE combined top bar -->
     <div class="navbar">
       <div class="menu" onclick="openMenu()">☰</div>
-      <div class="logo">NextGen Learning</div>
-    </div>
 
+      <header>
+        <h3>About</h3>
+        <ul class="top-header-list">
+          <li onclick="window.location.href = 'learning.html'">🔥Tutorial</li>
+          <li onclick="window.location.href = 'notes.html'">Notes</li>
+          <li onclick="window.location.href = 'ai.html'">AI-EPR</li>
+          <li onclick="window.location.href = 'pyqs.html'">PYQS</li>
+          <li onclick="window.location.href = 'about.html'">About</li>
+        </ul>
+      </header>
+    </div>
     <div class="side-menu" id="sideMenu">
       <div onclick="closeMenu()">✕</div>
 
