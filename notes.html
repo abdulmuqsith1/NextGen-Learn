@@ -4,66 +4,96 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>HomePage</title>
+    <title>
+      Engineering Notes - Maths, Python, C, Java, DBMS, DSA & More | NextGen
+      Learning
+    </title>
+    <meta
+      name="description"
+      content="Free downloadable engineering notes: Maths, Python, C, C++, Java, DBMS, DSA, Web Development, Discrete Mathematics, and more — clear and exam-ready."
+    />
+    <meta
+      name="keywords"
+      content="engineering notes free download, DSA notes, DBMS notes, python notes, java notes, discrete mathematics notes"
+    />
+    <meta
+      property="og:title"
+      content="Free Engineering Notes | NextGen Learning"
+    />
+    <meta
+      property="og:description"
+      content="Download comprehensive study materials and reference guides across core CS and engineering subjects."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://nextgen-learn.abdulmuqsithofficial.workers.dev/notes.html"
+    />
+    <meta
+      property="og:image"
+      content="https://nextgen-learn.abdulmuqsithofficial.workers.dev/images/og-preview.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Free Engineering Notes | NextGen Learning"
+    />
+    <meta
+      name="twitter:description"
+      content="Comprehensive, free engineering study notes."
+    />
+    <link
+      rel="canonical"
+      href="https://nextgen-learn.abdulmuqsithofficial.workers.dev/notes.html"
+    />
 
-    <!-- Google Fonts -->
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/notes.css" />
+    <!-- Main Website CSS -->
     <link rel="stylesheet" href="css/index.css" />
 
-    <!-- Safety-net override: guarantees the send button stays a fixed circle
-         even if an older .ustad-input-row button rule still exists in
-         notes.css or index.css. Loaded last, so it wins the cascade. -->
-    <style>
-      .ustad-input-row button {
-        width: 38px !important;
-        height: 38px !important;
-        padding: 0 !important;
-        border-radius: 50% !important;
-        flex-shrink: 0 !important;
-      }
-    </style>
-
-    <script>
-      function openMenu() {
-        document.getElementById("sideMenu").classList.add("active");
-      }
-
-      function closeMenu() {
-        document.getElementById("sideMenu").classList.remove("active");
-      }
-
-      function switchmode() {
-        document.body.classList.toggle("light-mode");
-      }
-    </script>
+    <!-- Notes Page CSS -->
+    <link rel="stylesheet" href="css/notes.css" />
   </head>
+
   <body>
-    <!-- ONE combined top bar -->
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
     <div class="navbar">
       <div class="menu" onclick="openMenu()">☰</div>
 
       <header>
         <h3>NextGen Notes</h3>
+
         <ul class="top-header-list">
-          <li onclick="window.location.href = 'learning.html'">🔥Tutorial</li>
+          <li onclick="window.location.href = 'learning.html'">🔥 Tutorial</li>
+
           <li onclick="window.location.href = 'notes.html'">Notes</li>
+
           <li onclick="window.location.href = 'ai.html'">AI-EPR</li>
+
           <li onclick="window.location.href = 'pyqs.html'">PYQS</li>
+
           <li onclick="window.location.href = 'about.html'">About</li>
         </ul>
       </header>
     </div>
-    <!-- SIDE MENU -->
+
+    <!-- =====================================================
+         SIDE MENU
+    ====================================================== -->
+
     <div class="side-menu" id="sideMenu">
-      <div onclick="closeMenu()"> ✕ Close Menu</div>
+      <div class="menu-close" onclick="closeMenu()">✕ Close Menu</div>
 
       <div class="navelement" onclick="window.location.href = 'index.html'">
         🏠 Home
@@ -73,12 +103,22 @@
         🧠 Learning Zone
       </div>
 
-      <div class="navelement" onclick="window.location.href = '#cse'">
-        💻 Computer Science Engineering / IT
+      <div class="sidebar-divider"></div>
+
+      <div class="sidebar-heading">Notes Sections</div>
+
+      <div
+        class="navelement section-nav active-nav"
+        onclick="goToSection('cse')"
+      >
+        💻 Computer Science
       </div>
-      <div class="navelement" onclick="window.location.href = '#ece'">
-        💻 Electronical Communication ECE
+
+      <div class="navelement section-nav" onclick="goToSection('ece')">
+        📡 Electronics & Communication
       </div>
+
+      <div class="sidebar-divider"></div>
 
       <div class="navelement" onclick="window.location.href = 'pyqs.html'">
         📚 PYQs
@@ -107,20 +147,35 @@
       <div class="navelement" onclick="switchmode()">🌗 Switch mode</div>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div class="main">
-      <section class="notes-section">
-        <h1 class="notes-section-title" id="cse">
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main notes-page">
+      <!-- =================================================
+             COMPUTER SCIENCE SECTION
+        ================================================== -->
+
+      <section class="notes-section" id="cse">
+        <h1 class="notes-section-title">
           Core Computer Science Programming Notes
         </h1>
+
+        <div class="title-line"></div>
 
         <p class="notes-section-subtitle">
           Download comprehensive study materials and reference guides.
         </p>
 
-        <!-- NOTES CARDS -->
+        <!-- =================================================
+                 CSE NOTES CARDS
+            ================================================== -->
+
         <div class="notes-card-grid">
-          <!-- Maths -->
+          <!-- =================================================
+                     MATHS
+                ================================================== -->
+
           <div
             class="notes-card"
             onclick="
@@ -132,11 +187,30 @@
 
             <div class="notes-card-info">
               <h3>Important Maths Notes</h3>
-              <p>Full Differentiation</p>
+
+              <p>Easy to understand</p>
+            </div>
+          </div>
+          <div
+            class="notes-card"
+            onclick="
+              window.location.href =
+                'https://drive.google.com/file/d/1Djwchm4R_lolFnzgTGXujdLHVszE9jkJ/view?usp=drive_link'
+            "
+          >
+            <img src="images/maths.jpg" alt="Maths Notes" />
+
+            <div class="notes-card-info">
+              <h3>Important Maths Notes</h3>
+
+              <p>Easy to understand</p>
             </div>
           </div>
 
-          <!-- Python -->
+          <!-- =================================================
+                     PYTHON
+                ================================================== -->
+
           <div
             class="notes-card"
             onclick="
@@ -148,11 +222,15 @@
 
             <div class="notes-card-info">
               <h3>Python Notes</h3>
+
               <p>Easy to understand</p>
             </div>
           </div>
 
-          <!-- C -->
+          <!-- =================================================
+                     C
+                ================================================== -->
+
           <div
             class="notes-card"
             onclick="
@@ -160,14 +238,17 @@
                 'https://drive.google.com/file/d/1iUjuNSm2lZMRfokrHcTpvFIPIzWUs9E-/view?usp=drive_link'
             "
           >
-            <img src="images/c.jpg" alt="C Notes" />
+            <img src="images/c.jpg" alt="C Programming Notes" />
 
             <div class="notes-card-info">
               <h3>Foundational Language</h3>
             </div>
           </div>
 
-          <!-- C++ -->
+          <!-- =================================================
+                     C++
+                ================================================== -->
+
           <div
             class="notes-card"
             onclick="
@@ -182,7 +263,10 @@
             </div>
           </div>
 
-          <!-- Java -->
+          <!-- =================================================
+                     JAVA
+                ================================================== -->
+
           <div
             class="notes-card"
             onclick="
@@ -197,7 +281,10 @@
             </div>
           </div>
 
-          <!--DSA-->
+          <!-- =================================================
+                     DSA
+                ================================================== -->
+
           <div
             class="notes-card"
             onclick="
@@ -209,10 +296,15 @@
 
             <div class="notes-card-info">
               <h3>DSA Notes</h3>
+
               <p>Data Structures and Algorithms through C</p>
             </div>
           </div>
-          <!--DAA-->
+
+          <!-- =================================================
+                     DAA
+                ================================================== -->
+
           <div
             class="notes-card"
             onclick="
@@ -223,11 +315,16 @@
             <img src="images/daa.jpg" alt="DAA Notes" />
 
             <div class="notes-card-info">
-              <h3>Design and Analysis of ALGORITHMS Part 2 out of 5</h3>
-              <p>enjoy the clear notes and depth in concepts</p>
+              <h3>Design and Analysis of Algorithms</h3>
+
+              <p>Part 2 out of 5</p>
             </div>
           </div>
-          <!--Computer Hardware-->
+
+          <!-- =================================================
+                     COMPUTER HARDWARE
+                ================================================== -->
+
           <div
             class="notes-card"
             onclick="
@@ -235,14 +332,19 @@
                 'https://drive.google.com/file/d/1DYsFfZ4wPqO1ROAAieWkA2gRc7BA6mPb/view?usp=drive_link'
             "
           >
-            <img src="images/chn.jpg" alt="Computer Networks Notes" />
+            <img src="images/chn.jpg" alt="Computer Hardware and Networking" />
 
             <div class="notes-card-info">
               <h3>Computer Hardware & Networkings Notes</h3>
-              <p>computer networkings and basics</p>
+
+              <p>Computer networking and basics</p>
             </div>
           </div>
-          <!--DE1-->
+
+          <!-- =================================================
+                     DIGITAL ELECTRONICS PART 1
+                ================================================== -->
+
           <div
             class="notes-card"
             onclick="
@@ -250,14 +352,19 @@
                 'https://drive.google.com/file/d/1DYsFfZ4wPqO1ROAAieWkA2gRc7BA6mPb/view?usp=drive_link'
             "
           >
-            <img src="images/de.jpg" alt="Computer Networks Notes" />
+            <img src="images/de.jpg" alt="Digital Electronics" />
 
             <div class="notes-card-info">
               <h3>Digital Electronics</h3>
+
               <p>Part 1 in depth</p>
             </div>
           </div>
-          <!--DE2-->
+
+          <!-- =================================================
+                     DIGITAL ELECTRONICS PART 2
+                ================================================== -->
+
           <div
             class="notes-card"
             onclick="
@@ -265,18 +372,25 @@
                 'https://drive.google.com/file/d/1DYsFfZ4wPqO1ROAAieWkA2gRc7BA6mPb/view?usp=drive_link'
             "
           >
-            <img src="images/de.jpg" alt="Computer Networks Notes" />
+            <img src="images/de.jpg" alt="Digital Electronics" />
 
             <div class="notes-card-info">
               <h3>Digital Electronics</h3>
+
               <p>Part 2 in depth</p>
             </div>
           </div>
 
-          <!-- Web Development -->
+          <!-- =================================================
+                     WEB DEVELOPMENT
+                ================================================== -->
+
           <div
             class="notes-card"
-            onclick="window.location.href = 'https://www.rgmcet.edu.in/assets/img/departments/CSE/materials/R15/3-2/Web%20Technologies.pdf'"
+            onclick="
+              window.location.href =
+                'https://www.rgmcet.edu.in/assets/img/departments/CSE/materials/R15/3-2/Web%20Technologies.pdf'
+            "
           >
             <img src="images/webdev.jpg" alt="Web Development Notes" />
 
@@ -285,7 +399,10 @@
             </div>
           </div>
 
-          <!-- Discrete Math -->
+          <!-- =================================================
+                     DISCRETE MATH PART 1
+                ================================================== -->
+
           <div
             class="notes-card"
             onclick="
@@ -293,14 +410,19 @@
                 'https://drive.google.com/file/d/15HryLvhYhEKqP1k-qvqH28M3xPQLnVxp/view?usp=sharing'
             "
           >
-            <img src="images/dm.jpg" alt="Discrete Maths" />
+            <img src="images/dm.jpg" alt="Discrete Mathematics" />
 
             <div class="notes-card-info">
               <h3>Discrete Mathematics Part 1 out of 5</h3>
+
               <p>Violent Concepts in Simple Way</p>
             </div>
           </div>
-          <!-- Discrete Math -->
+
+          <!-- =================================================
+                     DISCRETE MATH PART 2
+                ================================================== -->
+
           <div
             class="notes-card"
             onclick="
@@ -308,79 +430,39 @@
                 'https://drive.google.com/file/d/1e9snztOsfkMVdgD_2yOuNYWLYCuWMgBR/view?usp=drive_link'
             "
           >
-            <img src="images/dm.jpg" alt="Discrete Maths" />
+            <img src="images/dm.jpg" alt="Discrete Mathematics" />
 
             <div class="notes-card-info">
-              <h3>
-                Discrete Mathematics Part 2 out of 5 next part coming soon
-                ins....
-              </h3>
+              <h3>Discrete Mathematics Part 2 out of 5</h3>
+
               <p>Violent Concepts in Simple Way</p>
             </div>
           </div>
-          
-          
         </div>
-        <!-- closes notes-card-grid -->
       </section>
-    </div>
 
-    <!-- Ustad Chat Button -->
-    <div id="ustadToggle" onclick="toggleUstad()">
-      <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
-        <path
-          d="M12 2C6.48 2 2 6.02 2 11c0 2.25 1 4.29 2.64 5.85L4 22l5.34-1.4C10.36 20.85 11.17 21 12 21c5.52 0 10-4.02 10-9s-4.48-10-10-10z"
-        />
-      </svg>
-    </div>
+      <!-- =====================================================
+             ECE SECTION
+        ====================================================== -->
 
-    <!-- Ustad Chat Window -->
-    <div id="ustadWindow">
-      <div class="ustad-header">
-        <div class="ustad-avatar">🤖</div>
-        <div class="ustad-header-info">
-          <div class="ustad-name">Ustad</div>
-          <div class="ustad-status">Online • AI Mentor</div>
-        </div>
-        <div class="ustad-close" onclick="toggleUstad()">✕</div>
-      </div>
-
-      <div id="ustadMessages" class="ustad-messages">
-        <div class="ustad-msg bot">
-          <div class="bubble">
-            Hey! I'm Ustad 👋 Ask me anything about your subjects.
-          </div>
-          <span class="ustad-time">Now</span>
-        </div>
-      </div>
-
-      <div class="ustad-input-row">
-        <input
-          id="ustadInput"
-          type="text"
-          placeholder="Type a message"
-          onkeydown="if (event.key === 'Enter') sendToUstad();"
-        />
-        <button onclick="sendToUstad()">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
-            <path d="M2 21l21-9L2 3v7l15 2-15 2z" />
-          </svg>
-        </button>
-      </div>
-    </div>
-<div class="main">
-      <section class="notes-section">
-        <h1 class="notes-section-title" id="ece">
-          Core Electronical Communication Engineering
+      <section class="notes-section" id="ece">
+        <h1 class="notes-section-title">
+          Core Electronics & Communication Engineering
         </h1>
+
+        <div class="title-line"></div>
 
         <p class="notes-section-subtitle">
           Download comprehensive study materials and reference guides.
         </p>
 
-        <!-- NOTES CARDS -->
+        <!-- =================================================
+                 ECE NOTES CARDS
+            ================================================== -->
+
         <div class="notes-card-grid">
-          <!-- Maths -->
+          <!-- MATHS -->
+
           <div
             class="notes-card"
             onclick="
@@ -392,10 +474,13 @@
 
             <div class="notes-card-info">
               <h3>Important Maths Notes</h3>
+
               <p>Full Differentiation</p>
             </div>
           </div>
-          <!--Basic Electronics And Sensors-->
+
+          <!-- BASIC ELECTRONICS -->
+
           <div
             class="notes-card"
             onclick="
@@ -403,14 +488,17 @@
                 'https://drive.google.com/file/d/1VFBjozqQqXuvr_4B4KKq-R0Zs9xM8Yjs/view?usp=drive_link'
             "
           >
-            <img src="images/de.jpg" alt="Computer Networks Notes" />
+            <img src="images/de.jpg" alt="Basic Electronics and Sensors" />
 
             <div class="notes-card-info">
               <h3>Basic Electronics And Sensors</h3>
+
               <p>Part 1 in depth</p>
             </div>
           </div>
-          <!--DE1-->
+
+          <!-- DIGITAL ELECTRONICS PART 1 -->
+
           <div
             class="notes-card"
             onclick="
@@ -418,14 +506,17 @@
                 'https://drive.google.com/file/d/1DYsFfZ4wPqO1ROAAieWkA2gRc7BA6mPb/view?usp=drive_link'
             "
           >
-            <img src="images/de.jpg" alt="Computer Networks Notes" />
+            <img src="images/de.jpg" alt="Digital Electronics" />
 
             <div class="notes-card-info">
               <h3>Digital Electronics</h3>
+
               <p>Part 1 in depth</p>
             </div>
           </div>
-          <!--DE2-->
+
+          <!-- DIGITAL ELECTRONICS PART 2 -->
+
           <div
             class="notes-card"
             onclick="
@@ -433,16 +524,139 @@
                 'https://drive.google.com/file/d/1DYsFfZ4wPqO1ROAAieWkA2gRc7BA6mPb/view?usp=drive_link'
             "
           >
-            <img src="images/de.jpg" alt="Computer Networks Notes" />
+            <img src="images/de.jpg" alt="Digital Electronics" />
 
             <div class="notes-card-info">
               <h3>Digital Electronics</h3>
+
               <p>Part 2 in depth</p>
             </div>
           </div>
+        </div>
+      </section>
 
+      <!-- =====================================================
+             ABOUT
+        ====================================================== -->
 
-    <!-- Ustad logic lives in javascript/ustad.js — loaded once, here, deferred -->
+      <section class="notes-about">
+        <div class="about-icon">📚</div>
+
+        <h2>About NextGen Notes</h2>
+
+        <p>
+          These notes are collected to help students understand important
+          concepts in a simple and accessible way.
+        </p>
+      </section>
+
+      <!-- =====================================================
+             BACK TO TOP
+        ====================================================== -->
+
+      <button
+        class="back-to-top"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      >
+        ↑ Back to Top
+      </button>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="notes-footer">
+      <p>© 2026 NextGen PYQs • Learn Smart. Prepare Better.</p>
+    </footer>
+
+    <!-- =====================================================
+         USTAD AI BUTTON
+    ====================================================== -->
+
+    <div id="ustadToggle" onclick="toggleUstad()">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+        <path
+          d="M12 2C6.48 2 2 6.02 2 11c0 2.25 1 4.29 2.64 5.85L4 22l5.34-1.4C10.36 20.85 11.17 21 12 21c5.52 0 10-4.02 10-9s-4.48-10-10-10z"
+        />
+      </svg>
+    </div>
+
+    <!-- =====================================================
+         USTAD AI WINDOW
+    ====================================================== -->
+
+    <div id="ustadWindow">
+      <div class="ustad-header">
+        <div class="ustad-avatar">🤖</div>
+
+        <div class="ustad-header-info">
+          <div class="ustad-name">Ustad</div>
+
+          <div class="ustad-status">Online • AI Mentor</div>
+        </div>
+
+        <div class="ustad-close" onclick="toggleUstad()">✕</div>
+      </div>
+
+      <div id="ustadMessages" class="ustad-messages">
+        <div class="ustad-msg bot">
+          <div class="bubble">
+            Hey! I'm Ustad 👋 Ask me anything about your subjects.
+          </div>
+
+          <span class="ustad-time"> Now </span>
+        </div>
+      </div>
+
+      <div class="ustad-input-row">
+        <input
+          id="ustadInput"
+          type="text"
+          placeholder="Type a message"
+          onkeydown="if (event.key === 'Enter') sendToUstad();"
+        />
+
+        <button onclick="sendToUstad()">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
+            <path d="M2 21l21-9L2 3v7l15 2-15 2z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+      function openMenu() {
+        document.getElementById("sideMenu").classList.add("active");
+      }
+
+      function closeMenu() {
+        document.getElementById("sideMenu").classList.remove("active");
+      }
+
+      function switchmode() {
+        document.body.classList.toggle("light-mode");
+      }
+
+      function goToSection(id) {
+        const section = document.getElementById(id);
+
+        if (section) {
+          section.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+
+          closeMenu();
+        }
+      }
+    </script>
+
+    <!-- Ustad JavaScript -->
     <script src="javascript/ustad.js" defer></script>
   </body>
 </html>

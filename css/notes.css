@@ -1,367 +1,468 @@
 /* =========================================================
    NEXTGEN PYQs
    NOTES PAGE
+   ORIGINAL CARD DESIGN
    ========================================================= */
 
 
 /* =========================================================
-   MAIN CONTAINER
+   BASIC RESET
    ========================================================= */
 
-.notes-main {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 25px 70px;
-  box-sizing: border-box;
+.notes-page {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 0 15px 60px;
+
+    box-sizing: border-box;
 }
 
 
 /* =========================================================
-   HERO
-   ========================================================= */
-
-.notes-hero {
-  text-align: center;
-  padding: 45px 20px 55px;
-}
-
-.hero-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 70px;
-  height: 70px;
-
-  border-radius: 20px;
-
-  background: rgba(0, 168, 132, 0.12);
-
-  font-size: 32px;
-
-  margin-bottom: 18px;
-}
-
-.notes-hero h1 {
-  margin: 0;
-
-  font-size: clamp(2rem, 5vw, 3.2rem);
-
-  font-weight: 700;
-
-  letter-spacing: -1px;
-}
-
-.notes-hero p {
-  max-width: 650px;
-
-  margin: 12px auto 0;
-
-  opacity: 0.7;
-
-  font-size: 1rem;
-
-  line-height: 1.7;
-}
-
-.hero-line {
-  width: 80px;
-  height: 4px;
-
-  margin: 25px auto 0;
-
-  border-radius: 10px;
-
-  background: #00a884;
-}
-
-
-/* =========================================================
-   SECTIONS
+   NOTES SECTION
    ========================================================= */
 
 .notes-section {
-  margin-bottom: 70px;
+    width: 100%;
+    max-width: 1050px;
 
-  scroll-margin-top: 100px;
+    margin: 0 auto 80px;
+
+    scroll-margin-top: 90px;
 }
 
 
 /* =========================================================
-   SECTION HEADING
+   SECTION TITLE
    ========================================================= */
 
-.section-heading {
-  display: flex;
-  align-items: center;
+.notes-section-title {
+    margin: 15px 0 0;
 
-  gap: 16px;
+    text-align: center;
 
-  margin-bottom: 25px;
+    font-family: "Poppins", sans-serif;
 
-  padding-bottom: 15px;
+    font-size: clamp(
+        2rem,
+        4vw,
+        3.2rem
+    );
 
-  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
-}
+    font-weight: 600;
 
-.section-icon {
-  display: flex;
+    line-height: 1.25;
 
-  align-items: center;
-  justify-content: center;
+    letter-spacing: 1px;
 
-  width: 52px;
-  height: 52px;
+    background:
+        linear-gradient(
+            90deg,
+            #8b8cff,
+            #7aa8ff,
+            #a08cff
+        );
 
-  flex-shrink: 0;
+    -webkit-background-clip: text;
+    background-clip: text;
 
-  border-radius: 15px;
-
-  background: rgba(0, 168, 132, 0.12);
-
-  font-size: 25px;
-}
-
-.section-heading h2 {
-  margin: 0;
-
-  font-size: clamp(1.25rem, 3vw, 1.7rem);
-
-  font-weight: 600;
-}
-
-.section-heading p {
-  margin: 4px 0 0;
-
-  opacity: 0.6;
-
-  font-size: 0.88rem;
+    -webkit-text-fill-color: transparent;
 }
 
 
 /* =========================================================
-   RESOURCE GRID
+   TITLE UNDERLINE
    ========================================================= */
 
-.resource-grid {
-  display: grid;
+.title-line {
+    width: 75px;
+    height: 3px;
 
-  grid-template-columns:
-    repeat(auto-fit, minmax(220px, 1fr));
+    margin: 12px auto 15px;
 
-  gap: 18px;
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00d9ff,
+            #8b5cf6
+        );
 }
 
 
 /* =========================================================
-   RESOURCE CARD
+   SECTION SUBTITLE
    ========================================================= */
 
-.resource-card {
-  position: relative;
+.notes-section-subtitle {
+    margin: 0 auto 32px;
 
-  min-height: 155px;
+    text-align: center;
 
-  padding: 22px;
+    max-width: 700px;
 
-  box-sizing: border-box;
+    font-size: 0.95rem;
 
-  border-radius: 18px;
+    line-height: 1.6;
 
-  text-decoration: none;
+    letter-spacing: 0.5px;
 
-  color: inherit;
-
-  background: rgba(255, 255, 255, 0.035);
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
-  overflow: hidden;
-
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
-}
-
-
-/* subtle top line */
-
-.resource-card::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 3px;
-
-  background: #00a884;
-
-  transform: scaleX(0);
-
-  transform-origin: left;
-
-  transition: transform 0.25s ease;
-}
-
-
-.resource-card:hover {
-  transform: translateY(-6px);
-
-  border-color: rgba(0, 168, 132, 0.5);
-
-  box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.25);
-
-  background: rgba(0, 168, 132, 0.07);
-}
-
-
-.resource-card:hover::before {
-  transform: scaleX(1);
+    opacity: 0.7;
 }
 
 
 /* =========================================================
-   YEAR
+   ORIGINAL NOTES CARD GRID
    ========================================================= */
 
-.year {
-  display: inline-flex;
+.notes-card-grid {
 
-  align-items: center;
+    width: 100%;
 
-  width: fit-content;
+    padding: 40px 55px;
 
-  padding: 5px 10px;
+    display: grid;
 
-  margin-bottom: 12px;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
 
-  border-radius: 8px;
+    gap: 48px 38px;
 
-  background: rgba(0, 168, 132, 0.14);
+    border-radius: 30px;
 
-  color: #00c897;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 168, 132, 0.07),
+            rgba(25, 30, 75, 0.25)
+        );
 
-  font-size: 0.75rem;
+    border: 1px solid rgba(
+        0,
+        190,
+        255,
+        0.22
+    );
 
-  font-weight: 600;
+    box-shadow:
+        0 0 25px rgba(
+            0,
+            160,
+            220,
+            0.06
+        );
+
+    box-sizing: border-box;
 }
 
 
 /* =========================================================
-   CARD TEXT
+   ORIGINAL NOTES CARD
    ========================================================= */
 
-.resource-card h3 {
-  margin: 0 0 15px;
+.notes-card {
 
-  font-size: 1rem;
+    width: 100%;
 
-  line-height: 1.4;
+    height: 220px;
 
-  font-weight: 600;
-}
+    position: relative;
 
+    overflow: hidden;
 
-.open-resource {
-  margin-top: auto;
+    border-radius: 20px;
 
-  font-size: 0.78rem;
+    cursor: pointer;
 
-  color: #00c897;
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            0.35
+        );
 
-  font-weight: 500;
+    border: 1px solid rgba(
+        150,
+        180,
+        210,
+        0.18
+    );
+
+    box-shadow:
+        0 5px 15px rgba(
+            0,
+            0,
+            0,
+            0.2
+        );
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
 
 /* =========================================================
-   ROADMAP CARD
+   CARD HOVER
    ========================================================= */
 
-.roadmap-card {
-  max-width: 400px;
-}
+.notes-card:hover {
 
-.card-icon {
-  font-size: 30px;
+    transform:
+        translateY(-8px);
 
-  margin-bottom: 12px;
-}
+    border-color:
+        rgba(
+            0,
+            220,
+            255,
+            0.5
+        );
 
-.card-content h3 {
-  margin-bottom: 6px;
-}
-
-.card-content p {
-  margin: 0 0 15px;
-
-  opacity: 0.6;
-
-  font-size: 0.82rem;
+    box-shadow:
+        0 12px 30px rgba(
+            0,
+            190,
+            255,
+            0.14
+        );
 }
 
 
 /* =========================================================
-   ABOUT NOTES
+   CARD IMAGE
+   ========================================================= */
+
+.notes-card img {
+
+    width: 100%;
+    height: 145px;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+
+/* =========================================================
+   IMAGE HOVER
+   ========================================================= */
+
+.notes-card:hover img {
+
+    transform: scale(1.05);
+
+    filter:
+        brightness(1.08);
+}
+
+
+/* =========================================================
+   CARD INFO
+   ========================================================= */
+
+.notes-card-info {
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    min-height: 75px;
+
+    padding: 12px 16px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(2, 10, 20, 0.7),
+            rgba(2, 10, 20, 0.96)
+        );
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+.notes-card-info h3 {
+
+    margin: 0;
+
+    color:
+        #00e5ff;
+
+    font-size:
+        0.9rem;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.2px;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+   ========================================================= */
+
+.notes-card-info p {
+
+    margin: 5px 0 0;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.72
+        );
+
+    font-size:
+        0.72rem;
+
+    line-height:
+        1.4;
+}
+
+
+/* =========================================================
+   CARD GLOW
+   ========================================================= */
+
+.notes-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    border-radius: inherit;
+
+    box-shadow:
+        inset 0 0 0 1px
+        rgba(
+            255,
+            255,
+            255,
+            0.02
+        );
+
+    transition:
+        box-shadow 0.3s ease;
+}
+
+
+.notes-card:hover::after {
+
+    box-shadow:
+        inset 0 0 20px
+        rgba(
+            0,
+            200,
+            255,
+            0.08
+        );
+}
+
+
+/* =========================================================
+   ABOUT SECTION
    ========================================================= */
 
 .notes-about {
-  max-width: 850px;
 
-  margin: 20px auto 60px;
+    width: 100%;
 
-  padding: 35px 30px;
+    max-width: 800px;
 
-  box-sizing: border-box;
+    margin: 30px auto 50px;
 
-  text-align: center;
+    padding: 35px 25px;
 
-  border-radius: 20px;
+    text-align: center;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(0, 168, 132, 0.08),
-      rgba(128, 0, 128, 0.08)
-    );
+    border-radius: 22px;
 
-  border: 1px solid rgba(0, 168, 132, 0.2);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 168, 132, 0.08),
+            rgba(90, 60, 150, 0.08)
+        );
+
+    border:
+        1px solid
+        rgba(
+            0,
+            168,
+            132,
+            0.2
+        );
+
+    box-sizing: border-box;
 }
+
 
 .about-icon {
-  font-size: 35px;
 
-  margin-bottom: 10px;
+    font-size: 35px;
+
+    margin-bottom: 10px;
 }
+
 
 .notes-about h2 {
-  margin: 0 0 15px;
 
-  font-size: 1.6rem;
+    margin: 0 0 12px;
+
+    font-size: 1.5rem;
+
+    font-weight: 600;
 }
 
+
 .notes-about p {
-  margin: 10px auto;
 
-  max-width: 720px;
+    max-width: 650px;
 
-  font-size: 0.9rem;
+    margin: 8px auto;
 
-  line-height: 1.8;
+    font-size: 0.85rem;
 
-  opacity: 0.7;
+    line-height: 1.7;
+
+    opacity: 0.7;
 }
 
 
@@ -370,33 +471,55 @@
    ========================================================= */
 
 .back-to-top {
-  display: block;
 
-  margin: 0 auto;
+    display: block;
 
-  padding: 11px 18px;
+    margin: 0 auto;
 
-  border: 1px solid rgba(0, 168, 132, 0.35);
+    padding: 10px 20px;
 
-  border-radius: 30px;
+    border-radius: 30px;
 
-  background: rgba(0, 168, 132, 0.1);
+    border:
+        1px solid
+        rgba(
+            0,
+            220,
+            255,
+            0.3
+        );
 
-  color: inherit;
+    background:
+        rgba(
+            0,
+            168,
+            132,
+            0.08
+        );
 
-  font-family: "Poppins", sans-serif;
+    color: inherit;
 
-  cursor: pointer;
+    font-family:
+        "Poppins",
+        sans-serif;
 
-  transition: 0.25s ease;
+    cursor: pointer;
+
+    transition:
+        0.25s ease;
 }
 
+
 .back-to-top:hover {
-  background: #00a884;
 
-  color: white;
+    background:
+        #00a884;
 
-  transform: translateY(-2px);
+    color:
+        white;
+
+    transform:
+        translateY(-3px);
 }
 
 
@@ -405,23 +528,31 @@
    ========================================================= */
 
 .notes-footer {
-  width: 100%;
 
-  padding: 25px 15px;
+    width: 100%;
 
-  box-sizing: border-box;
+    padding: 25px 15px;
 
-  text-align: center;
+    text-align: center;
 
-  border-top: 1px solid rgba(128, 128, 128, 0.15);
+    border-top:
+        1px solid
+        rgba(
+            128,
+            128,
+            128,
+            0.15
+        );
 
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
-.notes-footer p {
-  margin: 0;
 
-  font-size: 0.8rem;
+.notes-footer p {
+
+    margin: 0;
+
+    font-size: 0.78rem;
 }
 
 
@@ -430,43 +561,449 @@
    ========================================================= */
 
 .menu-close {
-  padding: 10px 15px;
 
-  font-size: 22px;
+    padding: 10px 15px;
 
-  cursor: pointer;
+    font-size: 22px;
 
-  width: fit-content;
+    cursor: pointer;
+
+    width: fit-content;
 }
+
 
 .active-nav {
-  background: rgba(0, 168, 132, 0.15);
+
+    background:
+        rgba(
+            0,
+            168,
+            132,
+            0.15
+        );
 }
+
 
 .sidebar-divider {
-  height: 1px;
 
-  background: rgba(128, 128, 128, 0.2);
+    height: 1px;
 
-  margin: 15px 10px;
+    margin: 15px 10px;
+
+    background:
+        rgba(
+            128,
+            128,
+            128,
+            0.2
+        );
 }
+
 
 .sidebar-heading {
-  padding: 8px 18px;
 
-  font-size: 0.75rem;
+    padding: 8px 18px;
 
-  font-weight: 600;
+    font-size: 0.72rem;
 
-  opacity: 0.5;
+    font-weight: 600;
 
-  text-transform: uppercase;
+    opacity: 0.5;
 
-  letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
 }
 
+
 .section-nav {
-  font-size: 0.88rem;
+
+    font-size: 0.88rem;
+}
+
+
+/* =========================================================
+   USTAD AI
+   ========================================================= */
+
+#ustadToggle {
+
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00a884,
+            #007f68
+        );
+
+    box-shadow:
+        0 8px 25px
+        rgba(
+            0,
+            168,
+            132,
+            0.35
+        );
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+#ustadToggle:hover {
+
+    transform:
+        scale(1.08);
+}
+
+
+/* =========================================================
+   USTAD WINDOW
+   ========================================================= */
+
+#ustadWindow {
+
+    position: fixed;
+
+    right: 25px;
+    bottom: 95px;
+
+    width: 350px;
+    max-width: calc(
+        100vw - 30px
+    );
+
+    height: 480px;
+    max-height: calc(
+        100vh - 120px
+    );
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background:
+        rgba(
+            10,
+            18,
+            30,
+            0.97
+        );
+
+    border:
+        1px solid
+        rgba(
+            0,
+            168,
+            132,
+            0.3
+        );
+
+    box-shadow:
+        0 20px 50px
+        rgba(
+            0,
+            0,
+            0,
+            0.45
+        );
+
+    z-index: 9998;
+
+    transform:
+        scale(0.9)
+        translateY(20px);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        0.25s ease;
+}
+
+
+/* USTAD OPEN STATE */
+
+#ustadWindow.active {
+
+    transform:
+        scale(1)
+        translateY(0);
+
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   USTAD HEADER
+   ========================================================= */
+
+.ustad-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 15px;
+
+    background:
+        rgba(
+            0,
+            168,
+            132,
+            0.12
+        );
+
+    border-bottom:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.06
+        );
+}
+
+
+.ustad-avatar {
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(
+            0,
+            168,
+            132,
+            0.2
+        );
+
+    font-size: 21px;
+}
+
+
+.ustad-header-info {
+
+    flex: 1;
+}
+
+
+.ustad-name {
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+}
+
+
+.ustad-status {
+
+    margin-top: 2px;
+
+    font-size: 0.68rem;
+
+    opacity: 0.6;
+}
+
+
+.ustad-close {
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    opacity: 0.7;
+}
+
+
+.ustad-close:hover {
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   USTAD MESSAGES
+   ========================================================= */
+
+.ustad-messages {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 15px;
+}
+
+
+.ustad-msg {
+
+    margin-bottom: 12px;
+}
+
+
+.ustad-msg .bubble {
+
+    display: inline-block;
+
+    max-width: 85%;
+
+    padding: 10px 12px;
+
+    border-radius: 12px;
+
+    font-size: 0.78rem;
+
+    line-height: 1.5;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.07
+        );
+}
+
+
+.ustad-time {
+
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 0.6rem;
+
+    opacity: 0.4;
+}
+
+
+/* =========================================================
+   USTAD INPUT
+   ========================================================= */
+
+.ustad-input-row {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px;
+
+    border-top:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.06
+        );
+}
+
+
+.ustad-input-row input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 38px;
+
+    padding:
+        0 12px;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.1
+        );
+
+    border-radius: 20px;
+
+    outline: none;
+
+    color: inherit;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.05
+        );
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size: 0.75rem;
+}
+
+
+.ustad-input-row button {
+
+    width: 38px !important;
+    height: 38px !important;
+
+    flex-shrink: 0;
+
+    padding: 0 !important;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50% !important;
+
+    background:
+        #00a884;
+
+    cursor: pointer;
 }
 
 
@@ -474,30 +1011,136 @@
    LIGHT MODE
    ========================================================= */
 
-.light-mode .resource-card {
-  background: rgba(0, 0, 0, 0.025);
+.light-mode .notes-card {
 
-  border-color: rgba(0, 0, 0, 0.08);
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.8
+        );
+
+    border-color:
+        rgba(
+            0,
+            0,
+            0,
+            0.12
+        );
 }
 
-.light-mode .resource-card:hover {
-  background: rgba(0, 168, 132, 0.07);
 
-  border-color: rgba(0, 168, 132, 0.35);
+.light-mode .notes-card-info {
 
-  box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.1);
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(
+                255,
+                255,
+                255,
+                0.7
+            ),
+            rgba(
+                255,
+                255,
+                255,
+                0.98
+            )
+        );
 }
 
-.light-mode .notes-about {
-  background:
-    linear-gradient(
-      135deg,
-      rgba(0, 168, 132, 0.06),
-      rgba(128, 0, 128, 0.05)
-    );
 
-  border-color: rgba(0, 168, 132, 0.2);
+.light-mode .notes-card-info h3 {
+
+    color:
+        #008f83;
+}
+
+
+.light-mode .notes-card-info p {
+
+    color:
+        rgba(
+            0,
+            0,
+            0,
+            0.65
+        );
+}
+
+
+.light-mode .notes-card-grid {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(
+                0,
+                168,
+                132,
+                0.05
+            ),
+            rgba(
+                80,
+                100,
+                180,
+                0.05
+            )
+        );
+
+    border-color:
+        rgba(
+            0,
+            120,
+            150,
+            0.18
+        );
+}
+
+
+.light-mode #ustadWindow {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.98
+        );
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .notes-card-grid {
+
+        padding:
+            35px 35px;
+
+        gap:
+            35px 25px;
+    }
+
+
+    .notes-card {
+
+        height:
+            205px;
+    }
+
+
+    .notes-card img {
+
+        height:
+            135px;
+    }
+
 }
 
 
@@ -507,105 +1150,259 @@
 
 @media (max-width: 700px) {
 
-  .notes-main {
-    padding:
-      25px 15px 50px;
-  }
+    .notes-page {
+
+        padding:
+            10px 12px 50px;
+    }
 
 
-  .notes-hero {
-    padding:
-      30px 10px 40px;
-  }
+    .notes-section {
+
+        margin-bottom:
+            55px;
+    }
 
 
-  .notes-hero h1 {
-    font-size: 2rem;
-  }
+    .notes-section-title {
+
+        font-size:
+            1.75rem;
+
+        line-height:
+            1.3;
+    }
 
 
-  .notes-hero p {
-    font-size: 0.85rem;
-  }
+    .notes-section-subtitle {
+
+        font-size:
+            0.78rem;
+
+        margin-bottom:
+            25px;
+    }
 
 
-  .section-heading {
-    gap: 12px;
-  }
+    .notes-card-grid {
+
+        padding:
+            25px 20px;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap:
+            20px 15px;
+
+        border-radius:
+            22px;
+    }
 
 
-  .section-icon {
-    width: 44px;
-    height: 44px;
+    .notes-card {
 
-    border-radius: 12px;
+        height:
+            185px;
 
-    font-size: 20px;
-  }
-
-
-  .section-heading h2 {
-    font-size: 1.15rem;
-  }
+        border-radius:
+            16px;
+    }
 
 
-  .section-heading p {
-    font-size: 0.75rem;
-  }
+    .notes-card img {
+
+        height:
+            120px;
+    }
 
 
-  .resource-grid {
-    grid-template-columns: 1fr 1fr;
+    .notes-card-info {
 
-    gap: 12px;
-  }
+        min-height:
+            65px;
 
-
-  .resource-card {
-    min-height: 140px;
-
-    padding: 17px;
-
-    border-radius: 15px;
-  }
+        padding:
+            9px 11px;
+    }
 
 
-  .resource-card h3 {
-    font-size: 0.85rem;
-  }
+    .notes-card-info h3 {
+
+        font-size:
+            0.72rem;
+    }
 
 
-  .open-resource {
-    font-size: 0.7rem;
-  }
+    .notes-card-info p {
+
+        font-size:
+            0.62rem;
+
+        margin-top:
+            3px;
+    }
 
 
-  .notes-about {
-    padding: 28px 20px;
-  }
+    #ustadToggle {
+
+        width:
+            52px;
+
+        height:
+            52px;
+
+        right:
+            18px;
+
+        bottom:
+            18px;
+    }
+
+
+    #ustadWindow {
+
+        right:
+            15px;
+
+        bottom:
+            80px;
+
+        width:
+            calc(
+                100vw - 30px
+            );
+
+        height:
+            450px;
+    }
 
 }
 
 
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
 @media (max-width: 430px) {
 
-  .resource-grid {
-    grid-template-columns: 1fr;
-  }
+    .notes-page {
+
+        padding-left:
+            8px;
+
+        padding-right:
+            8px;
+    }
 
 
-  .roadmap-card {
-    max-width: none;
-  }
+    .notes-section-title {
+
+        font-size:
+            1.45rem;
+
+        letter-spacing:
+            0.5px;
+    }
 
 
-  .notes-hero {
-    padding-top: 20px;
-  }
+    .notes-section-subtitle {
+
+        font-size:
+            0.72rem;
+    }
 
 
-  .notes-section {
-    margin-bottom: 50px;
-  }
+    .notes-card-grid {
+
+        padding:
+            20px 14px;
+
+        gap:
+            15px 10px;
+
+        border-radius:
+            18px;
+    }
+
+
+    .notes-card {
+
+        height:
+            170px;
+
+        border-radius:
+            14px;
+    }
+
+
+    .notes-card img {
+
+        height:
+            105px;
+    }
+
+
+    .notes-card-info {
+
+        min-height:
+            65px;
+
+        padding:
+            8px 9px;
+    }
+
+
+    .notes-card-info h3 {
+
+        font-size:
+            0.67rem;
+
+        line-height:
+            1.35;
+    }
+
+
+    .notes-card-info p {
+
+        font-size:
+            0.58rem;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 330px) {
+
+    .notes-card-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .notes-card {
+
+        height:
+            190px;
+    }
+
+
+    .notes-card img {
+
+        height:
+            125px;
+    }
+
+
+    .notes-card-info h3 {
+
+        font-size:
+            0.75rem;
+    }
 
 }

@@ -3,20 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HomePage</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+<title>About NextGen Learning & the Developer | Abdul Muqsith</title>
+<meta name="description" content="Learn about NextGen Learning's mission to provide free study resources, and meet the solo developer, Abdul Muqsith, behind the platform.">
+<meta name="keywords" content="NextGen Learning about, Abdul Muqsith, student platform developer">
+<meta property="og:title" content="About NextGen Learning">
+<meta property="og:description" content="A student-first platform built solo — tutorials, notes, PYQs, and an AI mentor, all free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nextgen-learn.abdulmuqsithofficial.workers.dev/about.html">
+<meta property="og:image" content="https://nextgen-learn.abdulmuqsithofficial.workers.dev/images/og-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About NextGen Learning">
+<meta name="twitter:description" content="Meet the platform and the developer behind it.">
+<link rel="canonical" href="https://nextgen-learn.abdulmuqsithofficial.workers.dev/about.html">    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/index.css" />
     <script>
       function openMenu() {
-        document.getElementById("sideMenu").classList.add("active"); //it add a class active to existing class sideMenu
+        document.getElementById("sideMenu").classList.add("active");
       }
-
       function closeMenu() {
         document.getElementById("sideMenu").classList.remove("active");
       }
@@ -29,9 +38,8 @@
     <!-- ONE combined top bar -->
     <div class="navbar">
       <div class="menu" onclick="openMenu()">☰</div>
-
       <header>
-        <h3>About</h3>
+        <h3>NextGen About</h3>
         <ul class="top-header-list">
           <li onclick="window.location.href = 'learning.html'">🔥Tutorial</li>
           <li onclick="window.location.href = 'notes.html'">Notes</li>
@@ -41,47 +49,422 @@
         </ul>
       </header>
     </div>
+
     <div class="side-menu" id="sideMenu">
       <div onclick="closeMenu()">✕</div>
-
       <div class="navelement" onclick="window.location.href = 'index.html'">
         🏠 Home
       </div>
-
       <div class="navelement" onclick="window.location.href = 'learning.html'">
         🧠 Learning Zone
       </div>
-
       <div class="navelement" onclick="window.location.href = 'notes.html'">
         📝 Notes
       </div>
-
       <div class="navelement" onclick="window.location.href = 'pyqs.html'">
         📚 PYQs
       </div>
-
       <div class="navelement" onclick="window.location.href = 'ai.html'">
         🤖 AI Exam Assistant
       </div>
-
       <div class="navelement" onclick="window.location.href = 'quiz.html'">
         ✏️ Quiz
       </div>
-
       <div class="navelement" onclick="window.location.href = 'mentor.html'">
         🎓 Mentor
       </div>
-
       <div class="navelement" onclick="window.location.href = 'nextgen.html'">
         🚀 NextGen Learning
       </div>
-
       <div class="navelement" onclick="window.location.href = 'about.html'">
         ℹ️ About
       </div>
-
       <div onclick="switchmode()" class="navelement">🌗 Switch mode</div>
     </div>
-    <div class="main"></div>
+
+    <div class="main">
+      <!-- ============ ABOUT THE PLATFORM ============ -->
+      <section class="about-platform">
+        <h1>About NextGen Learning</h1>
+        <p>
+          NextGen Learning is a student-first platform bringing together curated
+          video tutorials, exam-ready notes, previous year question papers, and
+          an AI-powered study mentor — all in one place. It's built for
+          engineering and medical students who want fast, reliable answers
+          without digging through a dozen scattered sources, switching between
+          ten different websites, or paying for content that should be freely
+          accessible.
+        </p>
+        <p>
+          What you're using right now is <strong>Version 2.0</strong> — a
+          platform that's actively evolving, not a finished product sitting
+          still. Every feature here, from the AI Exam Panic Remover to the
+          branch-wise PYQ archives, gets refined based on what students actually
+          need, and new content is added continuously rather than in occasional
+          bursts.
+        </p>
+        <p>
+          For now, every part of NextGen Learning — tutorials, notes, PYQs, and
+          Ustad the AI mentor — is completely free to use. The goal is simple:
+          keep quality, up-to-date study material within reach of every student,
+          regardless of what they can afford, for as long as that's possible to
+          sustain.
+        </p>
+       <div class="platform-stats">
+
+         <div class="stat">
+    <span class="stat-num">6+</span>
+    <span class="stat-label">
+      Engineering &amp; Medical Branches Covered
+    </span>
+  </div>
+
+  <div class="stat">
+    <span class="stat-num">50+</span>
+    <span class="stat-label">
+      🔥 Tutorials Collected from Genuine and Popular Tutors
+    </span>
+  </div>
+
+  <div class="stat">
+    <span class="stat-num">50+</span>
+    <span class="stat-label">
+      Notes on Different Subjects (Under Process)
+    </span>
+  </div>
+
+  <div class="stat">
+    <span class="stat-num">40+</span>
+    <span class="stat-label">
+      PYQ Archives (Branch-wise) and Quizzes
+    </span>
+  </div>
+
+  <div class="stat">
+    <span class="stat-num">2</span>
+    <span class="stat-label">
+      AI Mentor — Ustad, on call 24/7 + Human Support
+    </span>
+  </div>
+
+  <div class="stat">
+    <span class="stat-num">1</span>
+    <span class="stat-label">
+      AI EPR (Exam Panic Remover) — Get the Most Important
+      Topics, Explanations, and Revision/Remembering Tricks
+      to Rock in Any Exam
+    </span>
+  </div>
+
+</div>
+      <!-- ========================= -->
+      <!-- NEXTGEN LEARN SHOWCASE -->
+      <!-- ========================= -->
+
+      <section class="showcase-hero">
+        <h1>Welcome to NextGen Learning</h1>
+        <p>
+          NextGen Learning is built to take the panic out of exam prep. Whether
+          you're cramming the night before a university exam or grinding through
+          GATE/ECET/NEET-level depth, our tools are designed to get you unstuck
+          fast — with AI-powered explanations, rapid revision tricks, and real
+          human mentors backing up the AI whenever you need a second opinion.
+        </p>
+      </section>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>AI Exam Panic Remover</h3>
+          <p>
+            Stuck on a chapter the night before an exam? Just type in your
+            subject and chapter, pick your exam type — entrance-level
+            (GATE/ECET/EAMCET/NEET) or university exam — and get an instant,
+            clearly structured explanation tuned to exactly how deep you need to
+            go for that exam format.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Short Revision Tricks</h3>
+          <p>
+            No time to re-read an entire chapter? Get compressed revision points
+            and memory tricks (mnemonics, quick-recall patterns, key formulas)
+            generated instantly for any subject and chapter — built for the
+            "exam is in 2 hours" kind of study session.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🎓</div>
+          <h3>24/7 Mentor Support — AI + Human</h3>
+          <p>
+            Ustad, our AI mentor, is available around the clock in the chat
+            widget on every page — ask anything, anytime. And when a question
+            needs a real person's judgment, our Mentor Connect feature lets you
+            reach out to actual subject experts and seniors for tailored
+            guidance.
+          </p>
+        </div>
+      </div>
+
+      <!-- ============ DEVELOPER PORTFOLIO ============ -->
+      <section class="dev-hero">
+        <div class="dev-avatar">AM</div>
+        <h1>Abdul Muqsith</h1>
+        <p class="dev-tagline">
+          Developer · Planner · Tester · Debugger · Solo Builder
+        </p>
+        <p class="dev-summary">
+          The person behind every line of code, every design decision, and every
+          2 AM bug fix on this platform. From wiring up the AI chatbot to
+          writing the CSS you're looking at right now — this site is a
+          one-person build, end to end.
+        </p>
+        <div class="dev-links">
+          <a
+            href="https://www.linkedin.com/in/abdul-muqsith-954906342/"
+            target="_blank"
+            class="dev-link linkedin"
+            >LinkedIn</a
+          >
+          <a
+            href="https://www.youtube.com/@cybertech_official-1"
+            target="_blank"
+            class="dev-link youtube"
+            >YouTube — CyberTech</a
+          >
+          <a
+            href="https://skillupacademyhub.netlify.app"
+            target="_blank"
+            class="dev-link project"
+            >SkillUpAcademy</a
+          >
+          <a href="mailto:abdulmuqsithofficial@gmail.com" class="dev-link email"
+            >Email</a
+          >
+        </div>
+      </section>
+
+      <!-- ============ ROLES / WHAT I DO ============ -->
+      <h2 class="about-section-title">Every Hat, One Person</h2>
+      <p class="about-section-subtitle">
+        Building solo means wearing every hat on the team — here's what that
+        actually looks like on this project.
+      </p>
+      <div class="role-grid">
+        <div class="role-card">
+          <div class="role-icon">🧑‍💻</div>
+          <h3>Developer</h3>
+          <p>
+            Full-stack: HTML/CSS/JS frontend, Cloudflare Workers backend, Groq
+            API integration for the Ustad AI mentor, Supabase auth and data
+            layer on SkillUpAcademy.
+          </p>
+        </div>
+        <div class="role-card">
+          <div class="role-icon">🗺️</div>
+          <h3>Planner</h3>
+          <p>
+            Site architecture, page structure, feature roadmaps, and content
+            organization — deciding what gets built next and why, before a
+            single line of code is written.
+          </p>
+        </div>
+        <div class="role-card">
+          <div class="role-icon">🧪</div>
+          <h3>Tester</h3>
+          <p>
+            Manually testing every feature across breakpoints — mobile, tablet,
+            desktop — checking chat flows, form inputs, and edge cases before
+            anything ships live.
+          </p>
+        </div>
+        <div class="role-card">
+          <div class="role-icon">🐞</div>
+          <h3>Debugger</h3>
+          <p>
+            Reading console errors, tracing 401s and 404s through browser dev
+            tools, fixing CSS cascade conflicts, and hunting down the one
+            missing closing div.
+          </p>
+        </div>
+        <div class="role-card">
+          <div class="role-icon">🎨</div>
+          <h3>Designer</h3>
+          <p>
+            Dark-themed, WhatsApp-inspired chat UI, glowing gradient heroes, and
+            consistent visual language across every page on the site.
+          </p>
+        </div>
+        <div class="role-card">
+          <div class="role-icon">🚀</div>
+          <h3>DevOps / Deployment</h3>
+          <p>
+            Git version control, GitHub repo management, and Cloudflare Workers
+            deployment — including environment secrets, static asset serving,
+            and CI redeploys.
+          </p>
+        </div>
+      </div>
+
+      <!-- ============ EDUCATION ============ -->
+      <h2 class="about-section-title">Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>B.E. Computer Science Engineering — CBIT</h4>
+            <p>
+              Currently pursuing, via TG ECET 2026 lateral entry (Rank 39,
+              comfortably clearing the branch's closing rank).
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>Diploma in Cyber-Physical Systems — GIOE</h4>
+            <p>
+              Government Institute of Electronics, 2025 graduate — foundation in
+              embedded systems bridging hardware and software.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ FEATURED PROJECTS ============ -->
+      <h2 class="about-section-title">Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>🎓 SkillUpAcademy (older Version of NextGen Learn)</h3>
+          <p>
+            An ed-tech platform built solo — AI-powered exam revision assistant
+            (Groq API), secure Google OAuth 2.0 auth, Supabase backend, and a
+            mentor-connect feature.
+          </p>
+          <a href="https://skillupacademyhub.netlify.app" target="_blank"
+            >Visit Live Site →</a
+          >
+        </div>
+        <div class="project-card">
+          <h3>🔐 LockMate</h3>
+          <p>
+            A complete smart-lock system, built end-to-end from hardware to
+            cloud. Mobile app control, biometric authentication, and real-time
+            IoT connectivity — solo, concept to deployment.(See LinkedIn Profile
+            for More info regarding this Project)
+          </p>
+        </div>
+        <div class="project-card">
+          <h3>📚 NextGen Learning</h3>
+          <p>
+            This platform — tutorials, notes, PYQs, and Ustad the AI mentor,
+            deployed on Cloudflare Workers with a Groq-powered backend and zero
+            exposed secrets.
+          </p>
+        </div>
+        <div class="project-card">
+          <h3>🎥 CyberTech (YouTube) (mini Projects-Live Demo)</h3>
+          <p>
+            A channel teaching Computer Science and electronics concepts to
+            students, alongside providing Technical Guidance. Trying to Build
+            Indias largest Students Tech connection
+          </p>
+          <a
+            href="https://www.youtube.com/@cybertech_official-1"
+            target="_blank"
+            >Watch on YouTube →</a
+          >
+        </div>
+      </div>
+
+      <!-- ============ TECH STACK ============ -->
+      <h2 class="about-section-title">Tech Stack</h2>
+      <div class="stack-cloud">
+        <span class="stack-pill">HTML5</span>
+        <span class="stack-pill">CSS3</span>
+        <span class="stack-pill">JavaScript</span>
+        <span class="stack-pill">Node.js</span>
+        <span class="stack-pill">Cloudflare Workers</span>
+        <span class="stack-pill">Groq API</span>
+        <span class="stack-pill">Supabase</span>
+        <span class="stack-pill">Google OAuth 2.0</span>
+        <span class="stack-pill">Git &amp; GitHub</span>
+        <span class="stack-pill">Arduino / ESP32</span>
+        <span class="stack-pill">IoT &amp; MQTT</span>
+        <span class="stack-pill">Python</span>
+      </div>
+
+      <!-- ============ CONTACT CTA ============ -->
+      <section class="contact-cta">
+        <h2>Let's Connect</h2>
+        <p>
+          Open to collaboration, feedback, or just talking tech, cybersecurity,
+          or engineering admissions.
+        </p>
+        <div class="dev-links">
+          <a
+            href="https://www.linkedin.com/in/abdul-muqsith-954906342/"
+            target="_blank"
+            class="dev-link linkedin"
+            >Connect on LinkedIn</a
+          >
+          <a href="mailto:abdulmuqsithofficial@gmail.com" class="dev-link email"
+            >Send an Email</a
+          >
+        </div>
+      </section>
+
+      <button
+        class="back-to-top"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      >
+        ↑ Back to Top
+      </button>
+    </div>
+
+    <!-- Ustad Chat Button -->
+    <div id="ustadToggle" onclick="toggleUstad()">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+        <path
+          d="M12 2C6.48 2 2 6.02 2 11c0 2.25 1 4.29 2.64 5.85L4 22l5.34-1.4C10.36 20.85 11.17 21 12 21c5.52 0 10-4.02 10-9s-4.48-10-10-10z"
+        />
+      </svg>
+    </div>
+    <div id="ustadWindow">
+      <div class="ustad-header">
+        <div class="ustad-avatar">🤖</div>
+        <div class="ustad-header-info">
+          <div class="ustad-name">Ustad</div>
+          <div class="ustad-status">Online • AI Mentor</div>
+        </div>
+        <div class="ustad-close" onclick="toggleUstad()">✕</div>
+      </div>
+      <div id="ustadMessages" class="ustad-messages">
+        <div class="ustad-msg bot">
+          <div class="bubble">
+            Hey! I'm Ustad 👋 Ask me anything about your subjects.
+          </div>
+          <span class="ustad-time">Now</span>
+        </div>
+      </div>
+      <div class="ustad-input-row">
+        <input
+          id="ustadInput"
+          type="text"
+          placeholder="Type a message"
+          onkeydown="if (event.key === 'Enter') sendToUstad();"
+        />
+        <button onclick="sendToUstad()">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
+            <path d="M2 21l21-9L2 3v7l15 2-15 2z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="javascript/ustad.js" defer></script>
   </body>
 </html>

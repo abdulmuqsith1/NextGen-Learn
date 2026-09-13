@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/ai.css" />
+    <link rel="stylesheet" href="css/mentor.css" />
     <link rel="stylesheet" href="css/index.css" />
     <script>
       function openMenu() {
@@ -84,7 +84,217 @@
 
       <div onclick="switchmode()" class="navelement">🌗 Switch mode</div>
     </div>
-    <div class="main"></div>
+
+    <main class="mentor-page">
+      <section class="mentor-container">
+        <div class="mentor-header">
+          <div class="mentor-icon">🎓</div>
+
+          <h1>Connect With a Mentor</h1>
+
+          <p>
+            Get guidance from a mentor and take the next step in your academic
+            and career journey.
+          </p>
+        </div>
+
+        <form id="mentorForm">
+          <div class="form-group">
+            <label for="name"> Full Name </label>
+
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email"> Email </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone"> Phone Number </label>
+
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="branch"> Branch </label>
+
+              <select id="branch" name="branch" required>
+                <option value="">Select your branch</option>
+
+                <option value="CSE">CSE</option>
+
+                <option value="ECE">ECE</option>
+
+                <option value="EEE">EEE</option>
+
+                <option value="Civil">Civil</option>
+
+                <option value="Mechanical">Mechanical</option>
+
+                <option value="IT">IT</option>
+
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="year"> Year </label>
+
+              <select id="year" name="year" required>
+                <option value="">Select your year</option>
+
+                <option value="1st Year">1st Year</option>
+
+                <option value="2nd Year">2nd Year</option>
+
+                <option value="3rd Year">3rd Year</option>
+
+                <option value="4th Year">4th Year</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="topic"> What do you need mentoring for? </label>
+
+            <select id="topic" name="topic" required>
+              <option value="">Select a topic</option>
+
+              <option value="Programming">Programming</option>
+
+              <option value="DSA">DSA</option>
+
+              <option value="Placements">Placements</option>
+
+              <option value="Projects">Projects</option>
+
+              <option value="Career Guidance">Career Guidance</option>
+
+              <option value="Academics">Academics</option>
+
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message"> Tell us more </label>
+
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Explain what you need help with..."
+            ></textarea>
+          </div>
+
+          <button type="submit" id="submitButton">Submit Mentor Request</button>
+
+          <div id="formMessage" class="form-message"></div>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      const mentorForm = document.getElementById("mentorForm");
+
+      const submitButton = document.getElementById("submitButton");
+
+      const formMessage = document.getElementById("formMessage");
+
+      mentorForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        submitButton.disabled = true;
+
+        submitButton.textContent = "Submitting...";
+
+        formMessage.textContent = "";
+
+        formMessage.className = "form-message";
+
+        const formData = {
+          name: document.getElementById("name").value.trim(),
+
+          email: document.getElementById("email").value.trim(),
+
+          phone: document.getElementById("phone").value.trim(),
+
+          branch: document.getElementById("branch").value,
+
+          year: document.getElementById("year").value,
+
+          topic: document.getElementById("topic").value,
+
+          message: document.getElementById("message").value.trim(),
+        };
+
+        try {
+          const response = await fetch(
+            "https://sirdfmddmqqmgfpdjhkb.supabase.co/functions/v1/mentor-request",
+            {
+              method: "POST",
+
+              headers: {
+                "Content-Type": "application/json",
+              },
+
+              body: JSON.stringify(formData),
+            },
+          );
+
+          const result = await response.json();
+
+          console.log("STATUS:", response.status);
+          console.log("RESPONSE:", result);
+
+          if (!response.ok) {
+            throw new Error(
+              "HTTP " + response.status + " - " + JSON.stringify(result),
+            );
+          }
+
+          formMessage.textContent =
+            "✅ Your mentor request was submitted successfully!";
+
+          formMessage.classList.add("success");
+
+          mentorForm.reset();
+        } catch (error) {
+          console.error("MENTOR ERROR:", error);
+
+          formMessage.textContent = "❌ Error: " + error.message;
+
+          formMessage.classList.add("error");
+        } finally {
+          submitButton.disabled = false;
+
+          submitButton.textContent = "Submit Mentor Request";
+        }
+      });
+    </script>
+
     <!-- Ustad Chat Button -->
     <div id="ustadToggle" onclick="toggleUstad()">
       <svg viewBox="0 0 24 24" width="28" height="28" fill="white">

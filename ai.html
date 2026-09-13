@@ -3,7 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HomePage</title>
+    <title>
+      AI Exam Panic Remover - Instant Explanations & Revision Tricks | NextGen
+      Learning
+    </title>
+    <meta
+      name="description"
+      content="AI-powered exam prep tool: get instant chapter explanations tuned to GATE, ECET, NEET, or university exam level, plus quick revision tricks — free 24/7 AI mentor."
+    />
+    <meta
+      name="keywords"
+      content="AI exam assistant, last minute exam prep, revision tricks generator, AI study mentor, exam panic help"
+    />
+    <meta
+      property="og:title"
+      content="AI Exam Panic Remover | NextGen Learning"
+    />
+    <meta
+      property="og:description"
+      content="Instant AI-generated exam explanations and revision tricks — for whenever panic hits before an exam."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://nextgen-learn.abdulmuqsithofficial.workers.dev/ai.html"
+    />
+    <meta
+      property="og:image"
+      content="https://nextgen-learn.abdulmuqsithofficial.workers.dev/images/og-preview.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="AI Exam Panic Remover | NextGen Learning"
+    />
+    <meta
+      name="twitter:description"
+      content="Instant AI exam explanations and revision tricks."
+    />
+    <link
+      rel="canonical"
+      href="https://nextgen-learn.abdulmuqsithofficial.workers.dev/ai.html"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -85,7 +126,86 @@
 
       <div onclick="switchmode()" class="navelement">🌗 Switch mode</div>
     </div>
-    <div class="main"></div>
+    <div class="main">
+      <!-- ========================= -->
+      <!-- AI EXAM ASSISTANT -->
+      <!-- ========================= -->
+
+      <section class="ai-card">
+        <h1>🤖 AI Exam Assistant</h1>
+
+        <p class="subtitle">
+          Learn chapters according to your exam type.<br />
+        </p>
+
+        <input
+          type="text"
+          id="subject-name"
+          placeholder="Enter your subject name"
+        />
+
+        <input
+          type="text"
+          id="chapter-name"
+          placeholder="Enter your chapter name"
+        />
+
+        <select id="exam-type">
+          <option value="" selected disabled>Select Exam Type</option>
+
+          <option value="entrance">GATE / ECET / EAMCET / NEET</option>
+
+          <option value="university">University Exam</option>
+        </select>
+
+        <button onclick="generateExplanation()">Generate Explanation</button>
+        <p class="subtitle" style="color: brown; text-align: center">
+          <br />
+          <strong>Scroll Down for AI Response</strong>
+        </p>
+      </section>
+
+      <!-- ========================= -->
+      <!-- REVISION TRICKS -->
+      <!-- ========================= -->
+
+      <section class="ai-card">
+        <h2>🧠 AI Revision Tricks</h2>
+
+        <p class="subtitle">Get quick revision points and memory tricks.</p>
+
+        <input
+          type="text"
+          id="revision-subject"
+          placeholder="Enter subject name"
+        />
+
+        <input
+          type="text"
+          id="revision-chapter"
+          placeholder="Enter chapter name"
+        />
+
+        <button onclick="generateRevisionTricks()">
+          Generate Revision Tricks
+        </button>
+
+        <p class="subtitle" style="color: brown; text-align: center">
+          <br />
+          <strong>Scroll Down for AI Response</strong>
+        </p>
+      </section>
+
+      <!-- ========================= -->
+      <!-- AI RESPONSE -->
+      <!-- ========================= -->
+
+      <section id="ai-response-container" class="response-container">
+        <div id="ai-response" class="ai-response"></div>
+      </section>
+    </div>
+
+    <script src="javascript/ai.js"></script>
   </body>
   <!-- Ustad Chat Button -->
   <div id="ustadToggle" onclick="toggleUstad()">

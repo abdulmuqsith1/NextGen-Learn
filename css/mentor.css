@@ -1,3 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: "Poppins", sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #06191b,
+            #0b3034,
+            #123f43
+        );
+
+    color: white;
+}
+
+
+/* MAIN PAGE */
+
+.mentor-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+/* CONTAINER */
+
+.mentor-container {
+    width: 100%;
+    max-width: 850px;
+
+    background: rgba(13, 20, 32, 0.95);
+
+    border: 1px solid rgba(0, 229, 255, 0.18);
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+
+}
+
+
+/* HEADER */
+
+.mentor-header {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+.mentor-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 34px;
+
+    border-radius: 50%;
+
+    background: rgba(0, 229, 255, 0.1);
+
+    border: 1px solid rgba(0, 229, 255, 0.3);
+}
+
+
+.mentor-header h1 {
+    font-size: 32px;
+
+    margin-bottom: 10px;
+
+    color: white;
+}
+
+
+.mentor-header p {
+    color: #aebbc7;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+
+/* FORM */
+
+#mentorForm {
+    width: 100%;
+}
+
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 22px;
+}
+
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+label {
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #e7f7fa;
+}
+
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid #263746;
+
+    outline: none;
+
+    background: #0b1723;
+
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    transition: 0.25s;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+    color: #71808e;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    border-color: #00e5ff;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 229, 255, 0.08);
+}
+
+
+select {
+    cursor: pointer;
+}
+
+
+textarea {
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+
+/* BUTTON */
+
+#submitButton {
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    background: linear-gradient(
+        135deg,
+        #00bcd4,
+        #008fa3
+    );
+
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+#submitButton:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 229, 255, 0.2);
+}
+
+
+#submitButton:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* MESSAGE */
+
+.form-message {
+
+    text-align: center;
+
+    margin-top: 18px;
+
+    min-height: 24px;
+
+    font-size: 14px;
+}
+
+
+.form-message.success {
+    color: #55e6a5;
+}
+
+
+.form-message.error {
+    color: #ff7272;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .mentor-page {
+        padding: 25px 15px;
+    }
+
+
+    .mentor-container {
+        padding: 25px 20px;
+    }
+
+
+    .mentor-header h1 {
+        font-size: 25px;
+    }
+
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .mentor-container {
+        padding: 22px 16px;
+    }
+
+
+    .mentor-header h1 {
+        font-size: 22px;
+    }
+
+
+    .mentor-header p {
+        font-size: 13px;
+    }
+
+}
 /* ================================
 USTAD CHAT — TOGGLE BUTTON
 ================================ */

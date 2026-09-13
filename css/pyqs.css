@@ -1,3 +1,771 @@
+/* =========================================================
+PYQs PAGE
+Content styling only
+Navigation and chatbot styles are handled separately
+========================================================= */
+
+/* =========================================================
+MAIN CONTENT
+========================================================= */
+
+.notes-main {
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 40px 30px 60px;
+}
+
+/* =========================================================
+PAGE HERO
+========================================================= */
+
+.notes-hero {
+text-align: center;
+padding: 70px 20px 60px;
+}
+
+.hero-icon {
+display: block;
+font-size: 3.5rem;
+margin-bottom: 15px;
+}
+
+.notes-hero h1 {
+font-size: 2.8rem;
+font-weight: 700;
+line-height: 1.2;
+color: #ffffff;
+margin-bottom: 15px;
+}
+
+.notes-hero p {
+max-width: 700px;
+margin: 0 auto;
+color: #aebbc4;
+font-size: 1rem;
+line-height: 1.7;
+}
+
+.hero-line {
+width: 90px;
+height: 4px;
+margin: 25px auto 0;
+
+background: #00e5ff;
+border-radius: 10px;
+}
+
+/* =========================================================
+PYQ SECTIONS
+========================================================= */
+
+.notes-section {
+padding: 55px 0;
+scroll-margin-top: 80px;
+}
+
+.notes-section + .notes-section {
+border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================================
+SECTION HEADING
+========================================================= */
+
+.section-heading {
+display: flex;
+align-items: center;
+gap: 18px;
+
+margin-bottom: 30px;
+}
+
+.section-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+
+width: 58px;
+height: 58px;
+
+flex-shrink: 0;
+
+background: rgba(0, 229, 255, 0.08);
+
+border: 1px solid rgba(0, 229, 255, 0.25);
+
+border-radius: 14px;
+
+font-size: 1.8rem;
+}
+
+.section-heading h2 {
+color: #ffffff;
+
+font-size: 1.6rem;
+font-weight: 600;
+
+margin-bottom: 5px;
+}
+
+.section-heading p {
+color: #9daab4;
+
+font-size: 0.9rem;
+}
+
+/* =========================================================
+RESOURCE GRID
+========================================================= */
+
+.resource-grid {
+display: grid;
+
+grid-template-columns: repeat(
+auto-fit,
+minmax(240px, 1fr)
+);
+
+gap: 20px;
+}
+
+/* =========================================================
+RESOURCE CARD
+========================================================= */
+
+.resource-card {
+position: relative;
+
+display: flex;
+flex-direction: column;
+
+min-height: 190px;
+
+padding: 25px;
+
+text-decoration: none;
+
+background: #0d1420;
+
+border: 1px solid rgba(139, 123, 255, 0.22);
+
+border-radius: 16px;
+
+overflow: hidden;
+
+cursor: pointer;
+
+transition:
+transform 0.25s ease,
+border-color 0.25s ease,
+box-shadow 0.25s ease,
+background 0.25s ease;
+}
+
+/* Card hover */
+
+.resource-card:hover {
+transform: translateY(-6px);
+
+border-color: #00e5ff;
+
+background: #101b29;
+
+box-shadow:
+0 10px 30px rgba(0, 229, 255, 0.12);
+}
+
+/* =========================================================
+YEAR BADGE
+========================================================= */
+
+.year {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+
+width: fit-content;
+
+padding: 5px 12px;
+
+margin-bottom: 18px;
+
+color: #00e5ff;
+
+background: rgba(0, 229, 255, 0.08);
+
+border: 1px solid rgba(0, 229, 255, 0.25);
+
+border-radius: 20px;
+
+font-size: 0.8rem;
+font-weight: 600;
+}
+
+/* =========================================================
+RESOURCE CARD HEADING
+========================================================= */
+
+.resource-card h3 {
+color: #ffffff;
+
+font-size: 1.1rem;
+font-weight: 600;
+
+line-height: 1.4;
+
+margin-bottom: auto;
+}
+
+/* =========================================================
+OPEN RESOURCE
+========================================================= */
+
+.open-resource {
+display: inline-block;
+
+margin-top: 20px;
+
+color: #00e5ff;
+
+font-size: 0.9rem;
+font-weight: 500;
+
+transition: color 0.2s ease;
+}
+
+.resource-card:hover .open-resource {
+color: #ffffff;
+}
+
+/* =========================================================
+ROADMAP CARD
+========================================================= */
+
+.roadmap-card {
+display: flex;
+flex-direction: row;
+
+align-items: center;
+
+gap: 20px;
+
+min-height: 150px;
+}
+
+.roadmap-card .card-icon {
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+width: 65px;
+height: 65px;
+
+flex-shrink: 0;
+
+font-size: 2rem;
+
+background: rgba(139, 123, 255, 0.1);
+
+border: 1px solid rgba(139, 123, 255, 0.25);
+
+border-radius: 15px;
+}
+
+.roadmap-card .card-content {
+display: flex;
+flex-direction: column;
+
+flex: 1;
+}
+
+.roadmap-card .card-content h3 {
+margin-bottom: 5px;
+}
+
+.roadmap-card .card-content p {
+color: #9daab4;
+
+font-size: 0.9rem;
+
+margin-bottom: 5px;
+}
+
+/* =========================================================
+ABOUT NOTES
+========================================================= */
+
+.notes-about {
+max-width: 900px;
+
+margin: 60px auto 20px;
+
+padding: 45px 35px;
+
+text-align: center;
+
+background: rgba(13, 20, 32, 0.8);
+
+border: 1px solid rgba(139, 123, 255, 0.2);
+
+border-radius: 18px;
+}
+
+.about-icon {
+font-size: 2.5rem;
+
+margin-bottom: 15px;
+}
+
+.notes-about h2 {
+color: #ffffff;
+
+font-size: 1.7rem;
+
+margin-bottom: 15px;
+}
+
+.notes-about p {
+max-width: 750px;
+
+margin: 0 auto 12px;
+
+color: #aebbc4;
+
+font-size: 0.95rem;
+
+line-height: 1.8;
+}
+
+.notes-about p:last-child {
+margin-bottom: 0;
+}
+
+/* =========================================================
+BACK TO TOP
+========================================================= */
+
+.back-to-top {
+display: block;
+
+margin: 45px auto 10px;
+
+padding: 12px 22px;
+
+color: #00e5ff;
+
+background: rgba(0, 229, 255, 0.07);
+
+border: 1px solid rgba(0, 229, 255, 0.25);
+
+border-radius: 10px;
+
+font-family: inherit;
+font-size: 0.9rem;
+font-weight: 500;
+
+cursor: pointer;
+
+transition:
+background 0.2s ease,
+color 0.2s ease,
+transform 0.2s ease;
+}
+
+.back-to-top:hover {
+color: #ffffff;
+
+background: #128990;
+
+transform: translateY(-2px);
+}
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+.notes-footer {
+width: 100%;
+
+padding: 25px 20px;
+
+text-align: center;
+
+border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+background: rgba(0, 0, 0, 0.15);
+}
+
+.notes-footer p {
+color: #87949e;
+
+font-size: 0.85rem;
+}
+
+/* =========================================================
+TABLETS
+========================================================= */
+
+@media (max-width: 768px) {
+
+.notes-main {
+padding: 25px 20px 50px;
+}
+
+/* Hero */
+
+.notes-hero {
+padding: 50px 15px 45px;
+}
+
+.hero-icon {
+font-size: 3rem;
+}
+
+.notes-hero h1 {
+font-size: 2.2rem;
+}
+
+.notes-hero p {
+font-size: 0.9rem;
+}
+
+/* Sections */
+
+.notes-section {
+padding: 40px 0;
+}
+
+/* Section heading */
+
+.section-heading {
+gap: 14px;
+margin-bottom: 25px;
+}
+
+.section-icon {
+width: 50px;
+height: 50px;
+
+
+font-size: 1.5rem;
+
+
+}
+
+.section-heading h2 {
+font-size: 1.35rem;
+}
+
+.section-heading p {
+font-size: 0.82rem;
+}
+
+/* Cards */
+
+.resource-grid {
+grid-template-columns: repeat(
+2,
+minmax(0, 1fr)
+);
+
+
+gap: 16px;
+
+
+}
+
+.resource-card {
+min-height: 175px;
+
+
+padding: 20px;
+
+
+}
+
+.resource-card h3 {
+font-size: 1rem;
+}
+
+/* About */
+
+.notes-about {
+margin-top: 45px;
+
+
+padding: 35px 25px;
+
+
+}
+}
+
+/* =========================================================
+MOBILE PHONES
+========================================================= */
+
+@media (max-width: 500px) {
+
+.notes-main {
+padding: 10px 15px 40px;
+}
+
+/* Hero */
+
+.notes-hero {
+padding: 40px 5px 35px;
+}
+
+.hero-icon {
+font-size: 2.7rem;
+
+
+margin-bottom: 12px;
+
+
+}
+
+.notes-hero h1 {
+font-size: 1.8rem;
+}
+
+.notes-hero p {
+font-size: 0.82rem;
+
+
+line-height: 1.6;
+
+
+}
+
+.hero-line {
+width: 70px;
+height: 3px;
+}
+
+/* Sections */
+
+.notes-section {
+padding: 35px 0;
+
+
+scroll-margin-top: 60px;
+
+
+}
+
+/* Section heading */
+
+.section-heading {
+align-items: flex-start;
+
+
+gap: 12px;
+
+margin-bottom: 20px;
+
+
+}
+
+.section-icon {
+width: 45px;
+height: 45px;
+
+
+font-size: 1.3rem;
+
+border-radius: 11px;
+
+
+}
+
+.section-heading h2 {
+font-size: 1.15rem;
+
+
+line-height: 1.35;
+
+
+}
+
+.section-heading p {
+font-size: 0.75rem;
+
+
+line-height: 1.4;
+
+
+}
+
+/* Resource cards */
+
+.resource-grid {
+grid-template-columns: 1fr;
+
+
+gap: 14px;
+
+
+}
+
+.resource-card {
+min-height: 165px;
+
+
+padding: 20px;
+
+border-radius: 14px;
+
+
+}
+
+.resource-card h3 {
+font-size: 1rem;
+}
+
+.year {
+font-size: 0.75rem;
+
+
+padding: 4px 10px;
+
+margin-bottom: 15px;
+
+
+}
+
+.open-resource {
+font-size: 0.82rem;
+}
+
+/* Roadmap */
+
+.roadmap-card {
+gap: 15px;
+
+
+min-height: 140px;
+
+
+}
+
+.roadmap-card .card-icon {
+width: 52px;
+height: 52px;
+
+
+font-size: 1.6rem;
+
+border-radius: 12px;
+
+
+}
+
+.roadmap-card .card-content p {
+font-size: 0.8rem;
+}
+
+/* About */
+
+.notes-about {
+margin: 40px 0 15px;
+
+
+padding: 30px 20px;
+
+border-radius: 15px;
+
+
+}
+
+.about-icon {
+font-size: 2.2rem;
+}
+
+.notes-about h2 {
+font-size: 1.4rem;
+}
+
+.notes-about p {
+font-size: 0.82rem;
+
+
+line-height: 1.7;
+
+
+}
+
+/* Back to top */
+
+.back-to-top {
+margin-top: 30px;
+
+
+padding: 10px 18px;
+
+font-size: 0.82rem;
+
+
+}
+
+/* Footer */
+
+.notes-footer {
+padding: 20px 15px;
+}
+
+.notes-footer p {
+font-size: 0.75rem;
+}
+
+/* Remove desktop hover movement on touch */
+
+.resource-card:hover {
+transform: none;
+}
+
+.back-to-top:hover {
+transform: none;
+}
+}
+
+/* =========================================================
+VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+.notes-main {
+padding-left: 12px;
+padding-right: 12px;
+}
+
+.notes-hero h1 {
+font-size: 1.55rem;
+}
+
+.notes-hero p {
+font-size: 0.78rem;
+}
+
+.section-heading h2 {
+font-size: 1.05rem;
+}
+
+.section-heading p {
+font-size: 0.7rem;
+}
+
+.resource-card {
+padding: 17px;
+}
+
+.resource-card h3 {
+font-size: 0.95rem;
+}
+}
+
 /* ================================
 USTAD CHAT — TOGGLE BUTTON
 ================================ */

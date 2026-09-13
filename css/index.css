@@ -95,22 +95,43 @@ body {
 
 .side-menu {
     position: fixed;
-    
 
     top: 0;
     left: -280px;
 
     width: 280px;
-    height: 100vh;
-    margin-top: 50px;
+    height: calc(100vh - 50px);
 
+    margin-top: 50px;
     padding: 20px;
 
     background: #082326;
-
     color: white;
-    z-index: 1000;/*brimgs infront of all divs*/
+
+    z-index: 1000;
+
     transition: 0.3s;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Scrollbar */
+.side-menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.side-menu::-webkit-scrollbar-track {
+    background: #06191b;
+}
+
+.side-menu::-webkit-scrollbar-thumb {
+    background: #128990;
+    border-radius: 10px;
+}
+
+.side-menu::-webkit-scrollbar-thumb:hover {
+    background: #06cf9c;
 }
 
 .side-menu.active {
@@ -769,4 +790,11 @@ button:hover {
 }
 .light-mode .nextgen-list{
     color:#082326
+}
+@media (max-width: 600px) {
+
+    .top-header-list {
+        display: none;
+    }
+
 }
