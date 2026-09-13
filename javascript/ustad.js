@@ -22,7 +22,10 @@ async function sendToUstad() {
 
     const data = await response.json();
 
-    if (!response.ok) {
+    // worker.js returns { success, answer } on success and
+    // { success: false, error } on failure — check BOTH response.ok
+    // and data.success, and read data.answer (not data.reply).
+    if (!response.ok || !data.success) {
       console.error("Ustad backend error:", data);
       document.querySelector(".typing")?.remove();
       appendMessage(`Ustad error: ${data.error || "unknown error"}`, "bot");
@@ -30,10 +33,10 @@ async function sendToUstad() {
     }
 
     document.querySelector(".typing")?.remove();
-    appendMessage(data.reply, "bot");
+    appendMessage(data.answer, "bot");
 
     ustadHistory.push({ role: "user", content: msg });
-    ustadHistory.push({ role: "assistant", content: data.reply });
+    ustadHistory.push({ role: "assistant", content: data.answer });
     if (ustadHistory.length > 10) ustadHistory = ustadHistory.slice(-10);
   } catch (err) {
     console.error("Ustad network error:", err);

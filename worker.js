@@ -51,7 +51,10 @@ async function callGroq(messages, env) {
       },
 
       body: JSON.stringify({
-        model: "llama-3.3-70b-versatile",
+        // llama-3.3-70b-versatile is Enterprise-only on Groq now — not usable
+        // on free/developer accounts. openai/gpt-oss-20b is fast, free-tier
+        // available, and works for chat + explanation generation.
+        model: "openai/gpt-oss-20b",
         messages: messages,
         temperature: 0.7,
         max_tokens: 1500,
@@ -61,10 +64,19 @@ async function callGroq(messages, env) {
 
   if (!response.ok) {
     const errorText = await response.text();
-
     console.error("Groq Error:", errorText);
 
-    throw new Error("Groq API request failed");
+    // Surface the REAL reason instead of a generic message, so the frontend
+    // (and browser console) can show exactly why it failed.
+    let parsedMessage = errorText;
+    try {
+      const parsed = JSON.parse(errorText);
+      parsedMessage = parsed.error?.message || errorText;
+    } catch (_) {
+      // errorText wasn't JSON — use it as-is
+    }
+
+    throw new Error(parsedMessage);
   }
 
   const data = await response.json();
@@ -118,7 +130,8 @@ async function handleUstad(request, env) {
     return jsonResponse(
       {
         success: false,
-        error: "Unable to generate Ustad response.",
+        // Include the real error message now instead of hiding it
+        error: `Unable to generate Ustad response: ${error.message}`,
       },
       500
     );
@@ -222,7 +235,7 @@ Do not make up specific university syllabus information unless it is provided.
     return jsonResponse(
       {
         success: false,
-        error: "Unable to generate exam explanation.",
+        error: `Unable to generate exam explanation: ${error.message}`,
       },
       500
     );
@@ -299,7 +312,7 @@ Do not invent facts that are not relevant to the subject.
     return jsonResponse(
       {
         success: false,
-        error: "Unable to generate revision tricks.",
+        error: `Unable to generate revision tricks: ${error.message}`,
       },
       500
     );
