@@ -632,7 +632,38 @@ INPUT ROW
 .ustad-input-row button:hover {
   background: #1ea952;
 }
+.bubble strong {
+  font-weight: 700;
+}
 
+.bubble em {
+  font-style: italic;
+}
+
+.bubble h4 {
+  font-size: 0.95rem;
+  margin: 10px 0 4px 0;
+  color: #128c7e;
+}
+
+.bubble table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 8px 0;
+  font-size: 0.8rem;
+}
+
+.bubble th,
+.bubble td {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: left;
+}
+
+.bubble th {
+  background: #f0f0f0;
+  font-weight: 600;
+}
 /* ================================
 RESPONSIVE — MOBILE
 ================================ */
