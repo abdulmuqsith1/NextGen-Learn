@@ -556,3 +556,48 @@ RESPONSIVE — MOBILE
     right: 4vw;
   }
 }
+
+/* ================================
+AI RESPONSE — TABLES & HR
+(add to css/ai.css)
+================================ */
+
+#ai-response table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 16px 0;
+  font-size: 0.9rem;
+  background: rgba(126, 203, 218, 0.04);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#ai-response th,
+#ai-response td {
+  border: 1px solid rgba(126, 203, 218, 0.25);
+  padding: 10px 14px;
+  text-align: left;
+  color: #e9edef;
+}
+
+#ai-response th {
+  background: rgba(126, 203, 218, 0.15);
+  color: #7ecbda;
+  font-weight: 600;
+}
+
+#ai-response tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+#ai-response hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(126, 203, 218, 0.4), transparent);
+  margin: 24px 0;
+}
+
+#ai-response em {
+  font-style: italic;
+  color: #c9e7fb;
+}

@@ -40,12 +40,62 @@ function displayResponse(text) {
 
 
 // ======================================================
-// BASIC MARKDOWN-LIKE FORMATTER
+// MARKDOWN-LIKE FORMATTER (headings, bold, italic, lists,
+// tables, horizontal rules)
 // ======================================================
 
 function formatAIResponse(text) {
 
     let formatted = escapeHTML(text);
+
+    // Fenced code blocks — do this FIRST so nothing inside gets
+    // mangled by the bold/italic/table rules below
+    formatted = formatted.replace(
+        /```(\w*)\n?([\s\S]*?)```/g,
+        (_, lang, code) => `<pre><code>${code.trim()}</code></pre>`
+    );
+
+    // Inline code
+    formatted = formatted.replace(
+        /`([^`]+)`/g,
+        "<code>$1</code>"
+    );
+
+    // Markdown tables — | col | col |  →  real <table>
+    // Must run BEFORE heading/list rules since table rows also
+    // start with non-heading, non-bullet characters.
+    formatted = formatted.replace(
+        /((?:^\|.*\|\s*$\n?)+)/gm,
+        (block) => {
+            const rows = block.trim().split("\n").filter((r) => r.trim() !== "");
+            // drop separator rows like |---|---|
+            const dataRows = rows.filter((r) => !/^\|[\s:|-]+\|$/.test(r.trim()));
+            if (dataRows.length < 1) return block;
+
+            const toCells = (row) =>
+                row.trim().replace(/^\||\|$/g, "").split("|").map((c) => c.trim());
+
+            const [headerRow, ...bodyRows] = dataRows;
+            const headerCells = toCells(headerRow);
+
+            let html = "<table><thead><tr>";
+            headerCells.forEach((c) => (html += `<th>${c}</th>`));
+            html += "</tr></thead><tbody>";
+            bodyRows.forEach((r) => {
+                html += "<tr>";
+                toCells(r).forEach((c) => (html += `<td>${c}</td>`));
+                html += "</tr>";
+            });
+            html += "</tbody></table>";
+            return html;
+        }
+    );
+
+    // Horizontal rules  ---  or  ***  on their own line
+    formatted = formatted.replace(
+        /^\s*(-{3,}|\*{3,})\s*$/gm,
+        "<hr>"
+    );
 
     // Headings
     formatted = formatted.replace(
@@ -67,6 +117,13 @@ function formatAIResponse(text) {
     formatted = formatted.replace(
         /\*\*(.*?)\*\*/g,
         "<strong>$1</strong>"
+    );
+
+    // Italic (single * not part of a **; bold above already converted
+    // ** pairs to <strong>, so remaining single *'s are genuine italics)
+    formatted = formatted.replace(
+        /(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/g,
+        "<em>$1</em>"
     );
 
     // Bullet points
