@@ -18,7 +18,7 @@ async function handleUstad(request, env) {
       "Key length:",
       env.GROQ_API_KEY ? env.GROQ_API_KEY.length : "undefined",
     );
-    console.log("Key length:", env.GROQ_API_KEY ? env.GROQ_API_KEY.length : "undefined");
+    console.log("Key length:", env.GROQ_API_KEY ? env.GROQ_API_KEY.length : "undefined");//added
     const groqResponse = await fetch(
       "https://api.groq.com/openai/v1/chat/completions",
       {
