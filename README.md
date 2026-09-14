@@ -35,7 +35,8 @@ Students often have access to plenty of educational content, but finding the rig
 
 ## 🛠️ Tech Stack
 
-> _Add your specific stack here, e.g.:_
+<img width="1100" height="692" alt="image" src="https://github.com/user-attachments/assets/9c75c7f0-283a-4031-9bb5-4a29f44ce3a1" />
+
 - Frontend: HTML, CSS, JavaScript
 - Backend / Hosting: Cloudflare Workers
 - AI Integration: _(your AI provider, e.g. Groq API)_
