@@ -1,4 +1,3 @@
-# NOTE : © 2026 Abdul Muqsith. All rights reserved. This project is shared for portfolio purposes only MODIFYING AND DISTRIBUTION IS TREATED AS ILLEGAL.
 # 🚀 NextGen Learning
 
 ### AI-Powered Learning Platform for Students
@@ -194,6 +193,7 @@ https://github.com/abdulmuqsith1/NextGen-Learn
 
 **Live Demo:**
 https://nextgen-learn.abdulmuqsithofficial.workers.dev/
+# NOTE : © 2026 Abdul Muqsith. All rights reserved. This project is shared for portfolio purposes only MODIFYING AND DISTRIBUTION IS TREATED AS ILLEGAL.
 
 ---
 
