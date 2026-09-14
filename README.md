@@ -1,4 +1,4 @@
-# NOTE : © 2026 Abdul Muqsith. All rights reserved. This project is shared for portfolio purposes only.
+# NOTE : © 2026 Abdul Muqsith. All rights reserved. This project is shared for portfolio purposes only MODIFYING AND DISTRIBUTION IS TREATED AS ILLEGAL.
 # NextGen Learning 🚀
 
 **Free Engineering & Medical Study Hub** — a centralized learning platform for students to learn, practice, and revise all in one place.
